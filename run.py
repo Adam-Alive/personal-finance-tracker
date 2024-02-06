@@ -1,9 +1,40 @@
+import os
 # Personal Finance Tracker
+# Global variables 
+dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food', 'other']
+dict_values = '0.00'
+finance_dict = dict.fromkeys(dict_keys, dict_values)
+
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 
 # Enable user to input finance data
-income = input('Monthly income: ')
-print('Now enter the amount you spend each month on: ')
-rent_mortgage  = input('Rent or mortgage: ')
+def get_income():
+    while True:
+        try:
+            income = int(input('Monthly income: '))
+            clear()     
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+    get_rent_mortgage()
+
+
+def get_rent_mortgage():
+    print('Now enter the amount you spend each month on: ')
+    while True:
+        try:
+            rent_mortgage = int(input('Rent or mortgage: '))           
+            finance_dict['rent_mortgage'] = rent_mortgage
+            clear()
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+
+
+clear()
 gas = input('Gas: ')
 electric = input('Electric: ')
 phone = input('Phone: ')
@@ -17,14 +48,10 @@ print('Your financial summary will soon follow… \n')
 # Print dictionary for testing
 print('Test: Dictionary initially has 0.00 for each value... \n')
 
-dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food', 'other']
-dict_values = '0.00'
-finance_dict = dict.fromkeys(dict_keys, dict_values)
 print(finance_dict)
 
 
 print('Test: Dictionary values are updated from input data... \n')
-finance_dict['rent_mortgage'] = rent_mortgage
 finance_dict['gas'] = gas
 finance_dict['electric'] = electric
 finance_dict['phone'] = phone
@@ -45,15 +72,10 @@ def str_to_int(data):
 
 #item_cost = str_to_int(finance_dict)
 
-def main():
+if __name__ == '__main__':
     '''
     Run all program functions  
     '''
+    clear()
+    get_income()    
     item_cost = str_to_int(finance_dict)
-
-main()
-
-
-
-
-
