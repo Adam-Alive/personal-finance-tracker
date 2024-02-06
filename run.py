@@ -14,7 +14,7 @@ def clear():
 def get_income():
     while True:
         try:
-            income = int(input('Monthly income: '))
+            income = int(input('Monthly income: \n'))
             clear()     
             break
         except ValueError:
@@ -23,10 +23,10 @@ def get_income():
 
 
 def get_rent_mortgage():
-    print('Now enter the amount you spend each month on: ')
+    print('Now enter the amount you spend each month on: \n')
     while True:
         try:
-            rent_mortgage = int(input('Rent or mortgage: '))           
+            rent_mortgage = int(input('Rent or mortgage: '))
             finance_dict['rent_mortgage'] = rent_mortgage
             clear()
             break
@@ -36,10 +36,10 @@ def get_rent_mortgage():
 
 
 def get_gas():
-    print('Now enter the amount you spend each month on: ')
+    print('Now enter the amount you spend each month on: \n')
     while True:
         try:
-            gas = int(input('Gas: '))           
+            gas = int(input('Gas: '))
             finance_dict['gas'] = gas
             clear()
             break
@@ -49,10 +49,10 @@ def get_gas():
 
 
 def get_electric():
-    print('Now enter the amount you spend each month on: ')
+    print('Now enter the amount you spend each month on: \n')
     while True:
         try:
-            electric = int(input('Electric: '))           
+            electric = int(input('Electric: '))
             finance_dict['electric'] = electric
             clear()
             break
@@ -62,10 +62,10 @@ def get_electric():
 
 
 def get_phone():
-    print('Now enter the amount you spend each month on: ')
+    print('Now enter the amount you spend each month on: \n')
     while True:
         try:
-            phone = int(input('Phone: '))           
+            phone = int(input('Phone: '))
             finance_dict['phone'] = phone
             clear()
             break
@@ -75,10 +75,10 @@ def get_phone():
 
 
 def get_food():
-    print('Now enter the amount you spend each month on: ')
+    print('Now enter the amount you spend each month on: \n')
     while True:
         try:
-            food = int(input('Food: '))           
+            food = int(input('Food: '))
             finance_dict['food'] = food
             clear()
             break
@@ -88,10 +88,10 @@ def get_food():
 
 
 def get_other():
-    print('Now enter the amount you spend each month on: ')
+    print('Now enter the amount you spend each month on: \n')
     while True:
         try:
-            other = int(input('Other item not listed: '))           
+            other = int(input('Other item not listed: '))
             finance_dict['other'] = other
             clear()
             break
@@ -99,8 +99,6 @@ def get_other():
             print('Data is not valid, please try again')
     print(finance_dict)
 
-
-#other = input('Other item not listed: ')
 
 print('Thank you for completing your entries… \n')
 print('Your financial summary will soon follow… \n')
@@ -115,13 +113,15 @@ print('Test: Dictionary values are updated from input data... \n')
 
 # Test access to dictionary values
 # Test convert values to int and multiply by 2
+
+
 def str_to_int(data):
     '''
     Converts all string values to integers
     '''
     for value in finance_dict.values():
         item_cost = int(value)
-        item_cost = item_cost * 2       
+        item_cost = item_cost * 2
         print(item_cost)
 
 #item_cost = str_to_int(finance_dict)
