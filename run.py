@@ -32,14 +32,75 @@ def get_rent_mortgage():
             break
         except ValueError:
             print('Data is not valid, please try again')
+    get_gas()
 
 
-clear()
-gas = input('Gas: ')
-electric = input('Electric: ')
-phone = input('Phone: ')
-food = input('Food: ')
-other = input('Other item not listed: ')
+def get_gas():
+    print('Now enter the amount you spend each month on: ')
+    while True:
+        try:
+            gas = int(input('Gas: '))           
+            finance_dict['gas'] = gas
+            clear()
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+    get_electric()
+
+
+def get_electric():
+    print('Now enter the amount you spend each month on: ')
+    while True:
+        try:
+            electric = int(input('Electric: '))           
+            finance_dict['electric'] = electric
+            clear()
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+    get_phone()
+
+
+def get_phone():
+    print('Now enter the amount you spend each month on: ')
+    while True:
+        try:
+            phone = int(input('Phone: '))           
+            finance_dict['phone'] = phone
+            clear()
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+    get_food()
+
+
+def get_food():
+    print('Now enter the amount you spend each month on: ')
+    while True:
+        try:
+            food = int(input('Food: '))           
+            finance_dict['food'] = food
+            clear()
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+    get_other()
+
+
+def get_other():
+    print('Now enter the amount you spend each month on: ')
+    while True:
+        try:
+            other = int(input('Other item not listed: '))           
+            finance_dict['other'] = other
+            clear()
+            break
+        except ValueError:
+            print('Data is not valid, please try again')
+    print(finance_dict)
+
+
+#other = input('Other item not listed: ')
 
 print('Thank you for completing your entries… \n')
 print('Your financial summary will soon follow… \n')
@@ -48,16 +109,9 @@ print('Your financial summary will soon follow… \n')
 # Print dictionary for testing
 print('Test: Dictionary initially has 0.00 for each value... \n')
 
-print(finance_dict)
-
+#print(finance_dict)
 
 print('Test: Dictionary values are updated from input data... \n')
-finance_dict['gas'] = gas
-finance_dict['electric'] = electric
-finance_dict['phone'] = phone
-finance_dict['food'] = food
-finance_dict['other'] = other
-print(finance_dict)
 
 # Test access to dictionary values
 # Test convert values to int and multiply by 2
@@ -77,5 +131,5 @@ if __name__ == '__main__':
     Run all program functions  
     '''
     clear()
-    get_income()    
+    get_income()   
     item_cost = str_to_int(finance_dict)
