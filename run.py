@@ -10,19 +10,25 @@ def start_app():
     '''
     Welcome messages and instructions
     '''
-    print('Welcome to your Personal Finance Tracker where you can calculate your monthly')
-    print('disposable income (or deficit) and so review and plan your finances.\n')
-    print('You will be asked to enter your monthly take-home pay (after tax and other deductions),')
-    print('followed by various costs for rent, utilities, food and leisure etc.\n')
-    print('There are 12 expenditure fields and 3 more blank fields into which you can enter')
-    print('expenditure items not covered already.\n')
-    print('The output will apply to any currency and will provide a summary of your monthly')
-    print('and annual finances.\n')
-    print('We suggest you use your monthly bank statement for reference.\n')
-    print('You should round your figures to the nearest whole integer and enter a 0 (zero)')
-    print('if an expenditure item does not apply to you.\n')
-    print('Please press return to begin and after each entry made.\n')
+    print('Welcome to your Personal Finance Tracker where you can')
+    print('calculate your monthly disposable income (or deficit)')
+    print('and so review and plan your finances.\n')
 
+    print('You will be asked to enter your monthly take-home pay')
+    print('(after tax and other deductions), followed by various')
+    print('costs for rent, utilities, food and leisure etc.\n')
+
+    print('There are 12 expenditure fields and 3 more blank fields')
+    print('into which you can enter expenditure items not covered already.\n')
+
+    print('The output applies to any currency and will provide')
+    print('a summary of your weekly, monthly and annual finances.\n')
+
+    print('We suggest you use your monthly bank statement for reference.\n')
+
+    print('You should round your figures to the nearest whole number and')
+    print('enter 0 (zero) if an expenditure item does not apply to you.\n')
+    print('Please press return to begin, and after each entry made.\n')
 
 
 def clear():
