@@ -1,6 +1,6 @@
 import os
 # Personal Finance Tracker
-# Global variables 
+# Global variables
 dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food', 'other']
 dict_values = '0'
 finance_dict = dict.fromkeys(dict_keys, dict_values)
@@ -40,7 +40,7 @@ def get_income():
     while True:
         try:
             income = int(input('Monthly income: \n'))
-            clear()     
+            clear()
             break
         except ValueError:
             print('Data is not valid, please enter a whole number')
@@ -152,7 +152,7 @@ def str_to_int(data):
 
 if __name__ == '__main__':
     '''
-    Run all program functions  
+    Run all program functions
     '''
     clear()
     start_app()
