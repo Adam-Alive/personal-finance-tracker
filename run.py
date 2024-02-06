@@ -22,6 +22,7 @@ dict_values = '0.00'
 finance_dict = dict.fromkeys(dict_keys, dict_values)
 print(finance_dict)
 
+
 print('Test: Dictionary values are updated from input data... \n')
 finance_dict['rent_mortgage'] = rent_mortgage
 finance_dict['gas'] = gas
@@ -34,13 +35,23 @@ print(finance_dict)
 # Test access to dictionary values
 # Test convert values to int and multiply by 2
 def str_to_int(data):
+    '''
+    Converts all string values to integers
+    '''
     for value in finance_dict.values():
         item_cost = int(value)
         item_cost = item_cost * 2       
         print(item_cost)
 
-item_cost = str_to_int(finance_dict)
+#item_cost = str_to_int(finance_dict)
 
+def main():
+    '''
+    Run all program functions  
+    '''
+    item_cost = str_to_int(finance_dict)
+
+main()
 
 
 
