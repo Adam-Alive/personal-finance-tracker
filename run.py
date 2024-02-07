@@ -1,6 +1,7 @@
 import os
 
 global INCOME
+global MONTHLY_EXPENDITURE
 
 dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food', 'other']
 dict_values = '0'
@@ -141,9 +142,10 @@ def calculate_total_expenditure(data):
     '''
     Calculate total monthly expenditure.
     '''
-    monthly_expenditure = sum(data.values())
-    print(monthly_expenditure)
-    return monthly_expenditure
+    global MONTHLY_EXPENDITURE
+    MONTHLY_EXPENDITURE = sum(data.values())
+    print(MONTHLY_EXPENDITURE)
+    #return monthly_expenditure
 
 
 def calculate_monthly_surplus(income, expenditure):
@@ -152,6 +154,12 @@ def calculate_monthly_surplus(income, expenditure):
     '''
     surplus = income - expenditure
     print(surplus)
+    if surplus > 0:
+        print(f'> You have money to spare')
+    elif surplus == 0:
+        print(f'> Your expenditure matches your income exactly!')
+    else:
+        print(f'> You have a deficit')
 
 
 print('> Thank you for completing your entries… \n')
@@ -187,4 +195,4 @@ if __name__ == '__main__':
     get_income()
     item_cost = str_to_int(finance_dict)
     calculate_total_expenditure(finance_dict)
-    calculate_monthly_surplus(INCOME, monthly_expenditure)
+    calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
