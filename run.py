@@ -28,22 +28,31 @@ def start_app():
 
     print('> You should round your figures to the nearest whole number and')
     print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
-    print('> Please press return to begin, and after each entry made.\n')
+    print('> Begin by entering your monthly income and press return')
+    print('> after each entry made:\n')
 
 
 def clear():
+    '''
+    Clears the terminal window.
+    '''
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-# Enable user to input finance data
 def get_income():
+    '''
+    Get income data input by the user.
+    Run a while loop to ensure input data is a whole
+    number or 0.
+
+    '''
     while True:
         try:
             income = int(input('> Monthly income: \n'))
             clear()
             break
         except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
+            print('> Data is not valid, please enter a whole number or 0\n')
     get_rent_mortgage()
 
 
