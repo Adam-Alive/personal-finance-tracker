@@ -10,25 +10,25 @@ def start_app():
     '''
     Welcome messages and instructions
     '''
-    print('Welcome to your Personal Finance Tracker where you can')
-    print('calculate your monthly disposable income (or deficit)')
-    print('and so review and plan your finances.\n')
+    print('> Welcome to your Personal Finance Tracker where you can')
+    print('> calculate your monthly disposable income (or deficit)')
+    print('> and so review and plan your finances.\n')
 
-    print('You will be asked to enter your monthly take-home pay')
-    print('(after tax and other deductions), followed by various')
-    print('costs for rent, utilities, food and leisure etc.\n')
+    print('> You will be asked to enter your monthly take-home pay')
+    print('> (after tax and other deductions), followed by various')
+    print('> costs for rent, utilities, food and leisure etc.\n')
 
-    print('There are 12 expenditure fields and 3 more blank fields')
-    print('into which you can enter expenditure items not covered already.\n')
+    print('> There are 12 expenditure fields and 3 more blank fields')
+    print('> into which you can enter expenditure items not covered already.\n')
 
-    print('The output applies to any currency and will provide')
-    print('a summary of your weekly, monthly and annual finances.\n')
+    print('> The output applies to any currency and will provide')
+    print('> a summary of your weekly, monthly and annual finances.\n')
 
-    print('We suggest you use your monthly bank statement for reference.\n')
+    print('> We suggest you use your monthly bank statement for reference.\n')
 
-    print('You should round your figures to the nearest whole number and')
-    print('enter 0 (zero) if an expenditure item does not apply to you.\n')
-    print('Please press return to begin, and after each entry made.\n')
+    print('> You should round your figures to the nearest whole number and')
+    print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
+    print('> Please press return to begin, and after each entry made.\n')
 
 
 def clear():
@@ -39,16 +39,16 @@ def clear():
 def get_income():
     while True:
         try:
-            income = int(input('Monthly income: \n'))
+            income = int(input('> Monthly income: \n'))
             clear()
             break
         except ValueError:
-            print('Data is not valid, please enter a whole number')
+            print('> Data is not valid, please enter a whole number or 0')
     get_rent_mortgage()
 
 
 def get_rent_mortgage():
-    print('Now enter the amount you spend each month on: \n')
+    print('> Enter the amount you spend each month on: \n')
     while True:
         try:
             rent_mortgage = int(input('Rent or mortgage: '))
@@ -56,12 +56,12 @@ def get_rent_mortgage():
             clear()
             break
         except ValueError:
-            print('Data is not valid, please enter a whole number')
+            print('> Data is not valid, please enter a whole number or 0')
     get_gas()
 
 
 def get_gas():
-    print('Now enter the amount you spend each month on: \n')
+    print('> Enter the amount you spend each month on: \n')
     while True:
         try:
             gas = int(input('Gas: '))
@@ -69,12 +69,12 @@ def get_gas():
             clear()
             break
         except ValueError:
-            print('Data is not valid, please enter a whole number')
+            print('> Data is not valid, please enter a whole number or 0')
     get_electric()
 
 
 def get_electric():
-    print('Now enter the amount you spend each month on: \n')
+    print('> Enter the amount you spend each month on: \n')
     while True:
         try:
             electric = int(input('Electric: '))
@@ -82,12 +82,12 @@ def get_electric():
             clear()
             break
         except ValueError:
-            print('Data is not valid, please enter a whole number')
+            print('> Data is not valid, please enter a whole number or 0')
     get_phone()
 
 
 def get_phone():
-    print('Now enter the amount you spend each month on: \n')
+    print('> Enter the amount you spend each month on: \n')
     while True:
         try:
             phone = int(input('Phone: '))
@@ -95,12 +95,12 @@ def get_phone():
             clear()
             break
         except ValueError:
-            print('Data is not valid, please enter a whole number')
+            print('> Data is not valid, please enter a whole number or 0')
     get_food()
 
 
 def get_food():
-    print('Now enter the amount you spend each month on: \n')
+    print('> Enter the amount you spend each month on: \n')
     while True:
         try:
             food = int(input('Food: '))
@@ -108,12 +108,12 @@ def get_food():
             clear()
             break
         except ValueError:
-            print('Data is not valid, please enter a whole number')
+            print('> Data is not valid, please enter a whole number or 0')
     get_other()
 
 
 def get_other():
-    print('Now enter the amount you spend each month on: \n')
+    print('> Enter the amount you spend each month on: \n')
     while True:
         try:
             other = int(input('Other item not listed: '))
@@ -121,12 +121,12 @@ def get_other():
             clear()
             break
         except ValueError:
-            print('Data is not valid, please try again')
+            print('> Data is not valid, please enter a whole number or 0 ')
     print(finance_dict)
 
 
-print('Thank you for completing your entries… \n')
-print('Your financial summary will soon follow… \n')
+print('> Thank you for completing your entries… \n')
+print('> Your financial summary will soon follow… \n')
 
 # Create dictionary from expenditure categories and input data
 # Print dictionary for testing
