@@ -49,6 +49,7 @@ def get_income():
         try:
             income = int(input('> Monthly income: \n'))
             clear()
+            print(income)
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0\n')
@@ -60,7 +61,7 @@ def get_rent_mortgage():
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
-            rent_mortgage = int(input('Rent or mortgage: '))
+            rent_mortgage = int(input('> Rent or mortgage: '))
             finance_dict['rent_mortgage'] = rent_mortgage
             clear()
             break
@@ -73,7 +74,7 @@ def get_gas():
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
-            gas = int(input('Gas: '))
+            gas = int(input('> Gas: '))
             finance_dict['gas'] = gas
             clear()
             break
@@ -86,7 +87,7 @@ def get_electric():
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
-            electric = int(input('Electric: '))
+            electric = int(input('> Electric: '))
             finance_dict['electric'] = electric
             clear()
             break
@@ -99,7 +100,7 @@ def get_phone():
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
-            phone = int(input('Phone: '))
+            phone = int(input('> Phone: '))
             finance_dict['phone'] = phone
             clear()
             break
@@ -112,7 +113,7 @@ def get_food():
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
-            food = int(input('Food: '))
+            food = int(input('> Food: '))
             finance_dict['food'] = food
             clear()
             break
@@ -125,7 +126,7 @@ def get_other():
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
-            other = int(input('Other item not listed: '))
+            other = int(input('> Other item not listed: '))
             finance_dict['other'] = other
             clear()
             break
@@ -134,7 +135,7 @@ def get_other():
     print(finance_dict)
 
 
-def total_expenditure(data):
+def calculate_total_expenditure(data):
     '''
     Calculate total monthly expenditure.
     '''
@@ -143,7 +144,7 @@ def total_expenditure(data):
     return monthly_expenditure
 
 
-def monthly_surplus(income, expenditure):
+def calculate_monthly_surplus(income, expenditure):
     '''
     Subtract expenditure from income.
     '''
@@ -183,5 +184,5 @@ if __name__ == '__main__':
     # print(finance_dict)
     get_income()
     item_cost = str_to_int(finance_dict)
-    total_expenditure(finance_dict)
-    monthly_surplus(income, monthly_expenditure)
+    calculate_total_expenditure(finance_dict)
+    calculate_monthly_surplus(income, monthly_expenditure)
