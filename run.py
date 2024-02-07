@@ -186,16 +186,21 @@ def calculate_monthly_surplus(income, expenditure):
     '''
     surplus = income - expenditure
     print(surplus)
+    clear()
     if surplus > 0:
-        print(f'> You have money to spare')
+        print(f'> This means you have a monthly disposable income of {surplus} and')
+        print(f'> can consider additional savings, investments or expenditure.\n')
     elif surplus == 0:
         print(f'> Your expenditure matches your income exactly!')
     else:
-        print(f'> You have a deficit')
+        print(f'> This means you have a monthly deficit of {surplus} and')
+        print(f'> should review your expenditure.')
 
 
-print('> Thank you for completing your entries… \n')
-print('> Your financial summary will soon follow… \n')
+def first_summary():
+    clear()
+    print('> Thank you for completing your entries… \n')
+    print('> Your financial summary will soon follow… \n')
 
 # Create dictionary from expenditure categories and input data
 # Print dictionary for testing
@@ -217,3 +222,4 @@ if __name__ == '__main__':
     item_cost = str_to_int(finance_dict)
     calculate_total_expenditure(finance_dict)
     calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
+    # first_summary()
