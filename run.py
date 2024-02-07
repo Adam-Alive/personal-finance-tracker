@@ -134,6 +134,19 @@ def get_other():
     print(finance_dict)
 
 
+
+def calculate_expenditure(data):
+    for key, value in finance_dict.items():
+        print(f'{value}')
+
+
+
+
+#def calculate_surplus(income, expenditure):
+    #surplus = income - expenditure
+    #print(surplus)
+
+
 print('> Thank you for completing your entries… \n')
 print('> Your financial summary will soon follow… \n')
 
@@ -155,8 +168,6 @@ def str_to_int(data):
     '''
     for value in finance_dict.values():
         item_cost = int(value)
-        item_cost = item_cost * 2
-        print(item_cost)
 
 
 if __name__ == '__main__':
@@ -168,3 +179,4 @@ if __name__ == '__main__':
     # print(finance_dict)
     get_income()
     item_cost = str_to_int(finance_dict)
+    calculate_expenditure(finance_dict)
