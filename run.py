@@ -41,6 +41,14 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+def str_to_int(data):
+    '''
+    Converts all string values to integers
+    '''
+    for value in finance_dict.values():
+        item_cost = int(value)
+
+
 def get_income():
     '''
     Get income data input by the user.
@@ -61,6 +69,10 @@ def get_income():
 
 
 def get_rent_mortgage():
+    '''
+    Get expenditure data input by the user.
+    Update the finance_dict with this value.
+    '''
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
@@ -74,6 +86,10 @@ def get_rent_mortgage():
 
 
 def get_gas():
+    '''
+    Get expenditure data input by the user.
+    Update the finance_dict with this value.
+    '''
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
@@ -87,6 +103,10 @@ def get_gas():
 
 
 def get_electric():
+    '''
+    Get expenditure data input by the user.
+    Update the finance_dict with this value.
+    '''
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
@@ -100,6 +120,10 @@ def get_electric():
 
 
 def get_phone():
+    '''
+    Get expenditure data input by the user.
+    Update the finance_dict with this value.
+    '''
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
@@ -113,6 +137,10 @@ def get_phone():
 
 
 def get_food():
+    '''
+    Get expenditure data input by the user.
+    Update the finance_dict with this value.
+    '''
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
@@ -126,6 +154,10 @@ def get_food():
 
 
 def get_other():
+    '''
+    Get expenditure data input by the user.
+    Update the finance_dict with this value.
+    '''
     print('> Enter the amount you spend each month on: \n')
     while True:
         try:
@@ -172,17 +204,6 @@ print('Test: Dictionary initially has 0.00 for each value... \n')
 # print(finance_dict)
 
 print('Test: Dictionary values are updated from input data... \n')
-
-# Test access to dictionary values
-# Test convert values to int and multiply by 2
-
-
-def str_to_int(data):
-    '''
-    Converts all string values to integers
-    '''
-    for value in finance_dict.values():
-        item_cost = int(value)
 
 
 if __name__ == '__main__':
