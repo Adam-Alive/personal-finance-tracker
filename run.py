@@ -19,7 +19,7 @@ def start_app():
     print('> costs for rent, utilities, food and leisure etc.\n')
 
     print('> There are 12 expenditure fields and 3 more blank fields')
-    print('> into which you can enter expenditure items not covered already.\n')
+    print('> where you can enter expenditure items not covered already.\n')
 
     print('> The output applies to any currency and will provide')
     print('> a summary of your weekly, monthly and annual finances.\n')
@@ -44,7 +44,6 @@ def get_income():
     Get income data input by the user.
     Run a while loop to ensure input data is a whole
     number or 0.
-
     '''
     while True:
         try:
