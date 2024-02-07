@@ -52,7 +52,7 @@ def get_income():
             clear()
             break
         except ValueError:
-            print('> Data is not valid, please enter a whole number or 0\n')    
+            print('> Data is not valid, please enter a whole number or 0\n')
     print(income)
     get_rent_mortgage()
 
@@ -135,7 +135,6 @@ def get_other():
     print(finance_dict)
 
 
-
 def total_expenditure(data):
     '''
     Calculate total monthly expenditure.
@@ -151,17 +150,6 @@ def monthly_surplus(income, expenditure):
     '''
     surplus = income - expenditure
     print(surplus)
-
-
-
-
-
-
-
-
-#def calculate_surplus(income, expenditure):
-    #surplus = income - expenditure
-    #print(surplus)
 
 
 print('> Thank you for completing your entries… \n')
