@@ -190,12 +190,20 @@ def get_user_item():
     Update the finance_dict with this key and value.
     '''
     print('> TEST: \n')
-    #while True:
-        #try:
     item_key = input('> Name of item: ')
-    item_value = int(input(f'> Enter the amount you spend each month on: {item_key}\n'))    
-    finance_dict.update({'{item_key}': '{item_value}'})
+    while True:
+        try:
+            item_value = int(input(f'> Enter the amount you spend each month on {item_key}\n'))
+            finance_dict['item_key'] = item_value
+            clear()
+            break
+        except ValueError:
+            print('> Data is not valid, please enter a whole number or 0')
+    #finance_dict.update({'{item_key}': '{item_value}'})
+    #finance_dict.update({'item_key': 'item_value'})
+    # finance_dict['{item_key}'] = '{item_value}'
     print(finance_dict)
+    print(item_key, item_value)
             #finance_dict['other'] = other
             #clear()
             #break
