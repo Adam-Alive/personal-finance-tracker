@@ -182,26 +182,23 @@ def get_user_item():
     answer = input('> Enter y for yes or n for no\n')
     # print('> Enter the amount you spend each month on: \n')
     while True:
-        try:
-            if answer == 'y':
-                print('Answer is yes !!!')
-                break
-            elif answer == 'Y':
-                print('Answer is yes !!!')
-                break
-            elif answer == 'n':
-                print('Answer is no !!!')
-                break
-            elif answer == 'N':
-                print('Answer is no !!!')
-                break
-            else:
-                print('Please enter y or n')
-                break
-        except:
-            print('Please enter y or n')
+        if answer == 'y':
+            print('Answer is yes !!!')
             break
+        elif answer == 'Y':
+            print('Answer is yes !!!')
+            break
+        elif answer == 'n':
+            print('Answer is no !!!')
+            break
+        elif answer == 'N':
+            print('Answer is no !!!')
+            break
+        else:
+            answer = input('> Enter y for yes or n for no\n')
+            #get_user_item()
     print('end of try block')
+
 
 
 
