@@ -150,33 +150,12 @@ def get_food():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0')
-    # get_other()
-    get_user_item()
+    ask_user_item()
 
 
-# This function is a test one until get_user_item is confirmed
-def get_other():
-    '''
-    Get expenditure data input by the user.
-    Update the finance_dict with this value.
-    '''
-    print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            other = int(input('> Other item not listed: '))
-            finance_dict['other'] = other
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0 ')
-    # print(finance_dict)
-
-
-def get_user_item():
+def ask_user_item():
     '''
     Ask user if they wish to enter more expenditure items.
-    Get expenditure data input by the user.
-    Update the finance_dict with this value.
     '''
     print('> Would you like to add any more expenditure items not covered?\n')
     answer = input('> Enter y for yes or n for no\n')
@@ -196,9 +175,26 @@ def get_user_item():
             break
         else:
             answer = input('> Enter y for yes or n for no\n')
-            #get_user_item()
+            #ask_user_item()
     print('end of try block')
 
+
+
+def get_user_item():
+    '''
+    Ask user to input name of expenditure item and amount.
+    Update the finance_dict with this key and value.
+    '''
+    print('> Enter the amount you spend each month on: \n')
+    while True:
+        try:
+            other = int(input('> Other item not listed: '))
+            finance_dict['other'] = other
+            clear()
+            break
+        except ValueError:
+            print('> Data is not valid, please enter a whole number or 0 ')
+    # print(finance_dict)
 
 
 
