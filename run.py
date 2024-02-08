@@ -186,18 +186,19 @@ def calculate_monthly_surplus(income, expenditure):
     '''
     surplus = income - expenditure
     # print(surplus)
-    print(f'Monthly income: {income}\n')
-    print(f'Monthly expenditure: {expenditure}\n')
-    print(f'Income less expenditure: {surplus}\n')
+    print(f'> YOUR FINANCIAL SUMMARY\n')
+    print(f'> Monthly income: {income}\n')
+    print(f'> Monthly expenditure: {expenditure}\n')
+    print(f'> Income less expenditure: {surplus}\n')
     # clear()
     if surplus > 0:
         print(f'> You have a monthly disposable income of {surplus} and can')
         print(f'> consider additional savings, investments or expenditure.\n')
     elif surplus == 0:
-        print(f'> Your expenditure matches your income exactly!')
+        print(f'> Your expenditure matches your income exactly!\n')
     else:
         print(f'> You have a monthly deficit of {surplus} and')
-        print(f'> should review your expenditure.')
+        print(f'> should review your expenditure.\n')
     # closing_summary() ASK TIM IF CALL THIS FUNCTION HERE OR IN MAIN???
 
 
@@ -211,10 +212,10 @@ def closing_summary():
     # Weekly figures are rounded down to nearest whole number.
     weekly_income = annual_income // 52
     weekly_expenditure = annual_expenditure // 52
-    print(annual_income)
-    print(annual_expenditure)
-    print(weekly_income)
-    print(weekly_expenditure)
+    print(f'> Your annual income: {annual_income}\n')
+    print(f'> Your annual expenditure: {annual_expenditure}\n')
+    print(f'> Your weekly income: {weekly_income}\n')
+    print(f'> Your weekly expenditure: {weekly_expenditure}\n')
 
 
 
