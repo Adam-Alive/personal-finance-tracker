@@ -167,7 +167,7 @@ def get_other():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0 ')
-    print(finance_dict)
+    # print(finance_dict)
 
 
 def calculate_total_expenditure(data):
@@ -176,16 +176,19 @@ def calculate_total_expenditure(data):
     '''
     global MONTHLY_EXPENDITURE
     MONTHLY_EXPENDITURE = sum(data.values())
-    print(MONTHLY_EXPENDITURE)
-    #return monthly_expenditure
+    # print(MONTHLY_EXPENDITURE)
 
 
 def calculate_monthly_surplus(income, expenditure):
     '''
-    Subtract expenditure from income.
+    Subtract expenditure from income to calculate surplus.
+    Print out summary of financial data with messages. 
     '''
     surplus = income - expenditure
-    print(surplus)
+    # print(surplus)
+    print(f'Monthly income: {income}\n')
+    print(f'Monthly expenditure: {expenditure}\n')
+    print(f'Income less expenditure: {surplus}\n')
     # clear()
     if surplus > 0:
         print(f'> You have a monthly disposable income of {surplus} and can')
@@ -195,20 +198,33 @@ def calculate_monthly_surplus(income, expenditure):
     else:
         print(f'> You have a monthly deficit of {surplus} and')
         print(f'> should review your expenditure.')
+    # closing_summary() ASK TIM IF CALL THIS FUNCTION HERE OR IN MAIN???
 
 
-def first_summary():
-    clear()
-    print('> Thank you for completing your entries… \n')
-    print('> Your financial summary will soon follow… \n')
+def closing_summary():
+    '''
+    Calculate annual and weekly finance figures.
+    Print out closing summary of financial data with messages.
+    '''
+    annual_income = INCOME * 12
+    annual_expenditure = MONTHLY_EXPENDITURE * 12
+    # Weekly figures are rounded down to nearest whole number.
+    weekly_income = annual_income // 52
+    weekly_expenditure = annual_expenditure // 52
+    print(annual_income)
+    print(annual_expenditure)
+    print(weekly_income)
+    print(weekly_expenditure)
+
+
 
 # Create dictionary from expenditure categories and input data
 # Print dictionary for testing
-print('Test: Dictionary initially has 0.00 for each value... \n')
+# print('Test: Dictionary initially has 0.00 for each value... \n')
 
 # print(finance_dict)
 
-print('Test: Dictionary values are updated from input data... \n')
+# print('Test: Dictionary values are updated from input data... \n')
 
 
 if __name__ == '__main__':
@@ -222,4 +238,4 @@ if __name__ == '__main__':
     item_cost = str_to_int(finance_dict)
     calculate_total_expenditure(finance_dict)
     calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
-    # first_summary()
+    closing_summary()
