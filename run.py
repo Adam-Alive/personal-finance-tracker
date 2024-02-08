@@ -181,12 +181,27 @@ def get_user_item():
     print('> Would you like to add any more expenditure items not covered?\n')
     answer = input('> Enter y for yes or n for no\n')
     # print('> Enter the amount you spend each month on: \n')
-    #while True:
-        #try:
-    if answer != 'y':
-        print('Please enter y')
-    else:
-        print('Answer is yes !!!')
+    while True:
+        try:
+            if answer == 'y':
+                print('Answer is yes !!!')
+                break
+            elif answer == 'Y':
+                print('Answer is yes !!!')
+                break
+            elif answer == 'n':
+                print('Answer is no !!!')
+                break
+            elif answer == 'N':
+                print('Answer is no !!!')
+                break
+            else:
+                print('Please enter y or n')
+                break
+        except:
+            print('Please enter y or n')
+            break
+    print('end of try block')
 
 
 
