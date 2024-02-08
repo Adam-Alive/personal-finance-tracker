@@ -199,17 +199,11 @@ def get_user_item():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0')
-    #finance_dict.update({'{item_key}': '{item_value}'})
-    #finance_dict.update({'item_key': 'item_value'})
+    # finance_dict.update({'{item_key}': '{item_value}'})
+    # finance_dict.update({'item_key': 'item_value'})
     # finance_dict['{item_key}'] = '{item_value}'
     print(finance_dict)
     print(item_key, item_value)
-            #finance_dict['other'] = other
-            #clear()
-            #break
-        #except ValueError:
-           # print('> Data is not valid, please enter a whole number or 0 ')
-    # print(finance_dict)
 
 
 def calculate_total_expenditure(data):
@@ -258,16 +252,6 @@ def closing_summary():
     print(f'> Your annual expenditure: {annual_expenditure}\n')
     print(f'> Your weekly income: {weekly_income}\n')
     print(f'> Your weekly expenditure: {weekly_expenditure}\n')
-
-
-
-# Create dictionary from expenditure categories and input data
-# Print dictionary for testing
-# print('Test: Dictionary initially has 0.00 for each value... \n')
-
-# print(finance_dict)
-
-# print('Test: Dictionary values are updated from input data... \n')
 
 
 if __name__ == '__main__':
