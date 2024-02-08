@@ -186,14 +186,14 @@ def calculate_monthly_surplus(income, expenditure):
     '''
     surplus = income - expenditure
     print(surplus)
-    clear()
+    # clear()
     if surplus > 0:
-        print(f'> This means you have a monthly disposable income of {surplus} and')
-        print(f'> can consider additional savings, investments or expenditure.\n')
+        print(f'> You have a monthly disposable income of {surplus} and can')
+        print(f'> consider additional savings, investments or expenditure.\n')
     elif surplus == 0:
         print(f'> Your expenditure matches your income exactly!')
     else:
-        print(f'> This means you have a monthly deficit of {surplus} and')
+        print(f'> You have a monthly deficit of {surplus} and')
         print(f'> should review your expenditure.')
 
 
