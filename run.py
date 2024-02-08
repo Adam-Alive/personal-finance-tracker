@@ -163,21 +163,25 @@ def ask_user_item():
     while True:
         if answer == 'y':
             print('Answer is yes !!!')
+            get_user_item()
             break
         elif answer == 'Y':
             print('Answer is yes !!!')
+            get_user_item()
             break
+# *** Need to change function call for n or N
         elif answer == 'n':
             print('Answer is no !!!')
+            get_user_item()
             break
         elif answer == 'N':
             print('Answer is no !!!')
+            get_user_item()
             break
         else:
             answer = input('> Enter y for yes or n for no\n')
-            #ask_user_item()
     print('end of try block')
-
+    get_user_item()
 
 
 def get_user_item():
@@ -185,17 +189,19 @@ def get_user_item():
     Ask user to input name of expenditure item and amount.
     Update the finance_dict with this key and value.
     '''
-    print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            other = int(input('> Other item not listed: '))
-            finance_dict['other'] = other
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0 ')
+    print('> TEST: \n')
+    #while True:
+        #try:
+    item_key = input('> Name of item: ')
+    item_value = int(input(f'> Enter the amount you spend each month on: {item_key}\n'))    
+    finance_dict.update({'{item_key}': '{item_value}'})
+    print(finance_dict)
+            #finance_dict['other'] = other
+            #clear()
+            #break
+        #except ValueError:
+           # print('> Data is not valid, please enter a whole number or 0 ')
     # print(finance_dict)
-
 
 
 def calculate_total_expenditure(data):
@@ -210,7 +216,7 @@ def calculate_total_expenditure(data):
 def calculate_monthly_surplus(income, expenditure):
     '''
     Subtract expenditure from income to calculate surplus.
-    Print out summary of financial data with messages. 
+    Print out summary of financial data with messages.
     '''
     surplus = income - expenditure
     # print(surplus)
