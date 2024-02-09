@@ -60,11 +60,9 @@ def get_income():
         try:
             INCOME = int(input('> Monthly income: \n'))
             clear()
-            print(INCOME)
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0\n')
-    print(INCOME)
     get_rent_mortgage()
 
 
@@ -156,28 +154,27 @@ def get_food():
 def ask_user_item():
     '''
     Ask user if they wish to enter more expenditure items.
+    Validate input data for yes or no options.
     '''
     print('> Would you like to add any more expenditure items not covered?\n')
     answer = input('> Enter y or Y for yes, n or N for no\n')
     if answer == 'y':
-        #print('Answer is yes !!!')
         get_user_item()
     elif answer == 'Y':
-        #print('Answer is yes !!!')
         get_user_item()
     elif answer == 'n':
-        #print('Answer is no !!!')
         # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
         calculate_total_expenditure(finance_dict)
-        #print(finance_dict)
+        clear()
+        # print(finance_dict)
     elif answer == 'N':
-        print('Answer is no !!!')
         # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
         calculate_total_expenditure(finance_dict)
-        #print(finance_dict)
+        clear()
+        # print(finance_dict)
     else:
         answer = input('> Enter y or Y for yes, n or N for no\n')
-    print('end of try block')
+    # print('end of try block')
 
 
 def get_user_item():
@@ -185,7 +182,7 @@ def get_user_item():
     Ask user to input name of expenditure item and amount.
     Update the finance_dict with this key and value.
     '''
-    print('> TEST: \n')
+    # print('> TEST: \n')
     item_key = input('> Name of item: ')
     while True:
         try:
@@ -195,15 +192,16 @@ def get_user_item():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0')
-    # print(finance_dict)
-    # print(item_key, item_value)
     ask_user_item()
 
 
 def item_list(data):
-    print('> EXPENDITURE LIST')
+    '''
+    Get finance_dict and print list of all expenditure items.
+    '''
+    print('> YOUR EXPENDITURE LIST\n')
     for key, value in finance_dict.items():
-        print(f'{key.capitalize()}: {value}')
+        print(f'> {key.capitalize()}: {value}')
 
 
 def calculate_total_expenditure(data):
@@ -220,7 +218,7 @@ def calculate_monthly_surplus(income, expenditure):
     Print out summary of financial data with messages.
     '''
     surplus = income - expenditure
-    # print(surplus)
+    print('\n')
     print(f'> YOUR FINANCIAL SUMMARY\n')
     print(f'> Monthly income: {income}\n')
     print(f'> Monthly expenditure: {expenditure}\n')
