@@ -160,17 +160,21 @@ def ask_user_item():
     print('> Would you like to add any more expenditure items not covered?\n')
     answer = input('> Enter y or Y for yes, n or N for no\n')
     if answer == 'y':
-        print('Answer is yes !!!')
+        #print('Answer is yes !!!')
         get_user_item()
     elif answer == 'Y':
-        print('Answer is yes !!!')
+        #print('Answer is yes !!!')
         get_user_item()
     elif answer == 'n':
-        print('Answer is no !!!')
-        print(finance_dict)
+        #print('Answer is no !!!')
+        # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+        calculate_total_expenditure(finance_dict)
+        #print(finance_dict)
     elif answer == 'N':
         print('Answer is no !!!')
-        print(finance_dict)
+        # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+        calculate_total_expenditure(finance_dict)
+        #print(finance_dict)
     else:
         answer = input('> Enter y or Y for yes, n or N for no\n')
     print('end of try block')
@@ -185,15 +189,21 @@ def get_user_item():
     item_key = input('> Name of item: ')
     while True:
         try:
-            item_value = int(input(f'> Enter the amount you spend each month on: {item_key.capitalize()}\n'))
+            item_value = int(input(f'> Enter the amount you spend each month on: {item_key}\n'))
             finance_dict.update({item_key: item_value})
             clear()
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0')
-    print(finance_dict)
-    print(item_key, item_value)
+    # print(finance_dict)
+    # print(item_key, item_value)
     ask_user_item()
+
+
+def item_list(data):
+    print('> EXPENDITURE LIST')
+    for key, value in finance_dict.items():
+        print(f'{key.capitalize()}: {value}')
 
 
 def calculate_total_expenditure(data):
@@ -202,7 +212,6 @@ def calculate_total_expenditure(data):
     '''
     global MONTHLY_EXPENDITURE
     MONTHLY_EXPENDITURE = sum(data.values())
-    # print(MONTHLY_EXPENDITURE)
 
 
 def calculate_monthly_surplus(income, expenditure):
@@ -225,7 +234,7 @@ def calculate_monthly_surplus(income, expenditure):
     else:
         print(f'> You have a monthly deficit of {surplus} and')
         print(f'> should review your expenditure.\n')
-    # closing_summary() ASK TIM IF CALL THIS FUNCTION HERE OR IN MAIN???
+    # closing_summary() ** TIM - CALL THIS FUNCTION HERE OR STAY IN MAIN?
 
 
 def closing_summary():
@@ -253,6 +262,7 @@ if __name__ == '__main__':
     # print(finance_dict)
     get_income()
     item_cost = str_to_int(finance_dict)
+    item_list(finance_dict)
     calculate_total_expenditure(finance_dict)
     calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
     closing_summary()
