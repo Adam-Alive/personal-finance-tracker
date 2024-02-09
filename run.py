@@ -186,7 +186,7 @@ def get_user_item():
     while True:
         try:
             item_value = int(input(f'> Enter the amount you spend each month on: {item_key.capitalize()}\n'))
-            finance_dict['item_key'] = item_value
+            finance_dict.update({item_key: item_value})
             clear()
             break
         except ValueError:
@@ -194,7 +194,6 @@ def get_user_item():
     print(finance_dict)
     print(item_key, item_value)
     ask_user_item()
-
 
 
 def calculate_total_expenditure(data):
