@@ -3,7 +3,7 @@ import os
 global INCOME
 global MONTHLY_EXPENDITURE
 
-dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food', 'other']
+dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food']
 dict_values = '0'
 finance_dict = dict.fromkeys(dict_keys, dict_values)
 
@@ -158,30 +158,28 @@ def ask_user_item():
     Ask user if they wish to enter more expenditure items.
     '''
     print('> Would you like to add any more expenditure items not covered?\n')
-    answer = input('> Enter y for yes or n for no\n')
+    answer = input('> Enter y or Y for yes, n or N for no\n')
     # print('> Enter the amount you spend each month on: \n')
-    while True:
-        if answer == 'y':
-            print('Answer is yes !!!')
-            get_user_item()
-            break
-        elif answer == 'Y':
-            print('Answer is yes !!!')
-            get_user_item()
-            break
+    if answer == 'y':
+        print('Answer is yes !!!')
+        get_user_item()
+        #break
+    elif answer == 'Y':
+        print('Answer is yes !!!')
+        get_user_item()
+        #break
 # *** Need to change function call for n or N
-        elif answer == 'n':
-            print('Answer is no !!!')
-            get_user_item()
-            break
-        elif answer == 'N':
-            print('Answer is no !!!')
-            get_user_item()
-            break
-        else:
-            answer = input('> Enter y for yes or n for no\n')
+    elif answer == 'n':
+        print('Answer is no !!!')
+        print(finance_dict)
+        #break
+    elif answer == 'N':
+        print('Answer is no !!!')
+        print(finance_dict)
+        #break
+    else:
+        answer = input('> Enter y or Y for yes, n or N for no\n')
     print('end of try block')
-    get_user_item()
 
 
 def get_user_item():
@@ -193,17 +191,16 @@ def get_user_item():
     item_key = input('> Name of item: ')
     while True:
         try:
-            item_value = int(input(f'> Enter the amount you spend each month on {item_key}\n'))
+            item_value = int(input(f'> Enter the amount you spend each month on: {item_key.capitalize()}\n'))
             finance_dict['item_key'] = item_value
             clear()
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0')
-    # finance_dict.update({'{item_key}': '{item_value}'})
-    # finance_dict.update({'item_key': 'item_value'})
-    # finance_dict['{item_key}'] = '{item_value}'
     print(finance_dict)
     print(item_key, item_value)
+    ask_user_item()
+
 
 
 def calculate_total_expenditure(data):
