@@ -159,24 +159,18 @@ def ask_user_item():
     '''
     print('> Would you like to add any more expenditure items not covered?\n')
     answer = input('> Enter y or Y for yes, n or N for no\n')
-    # print('> Enter the amount you spend each month on: \n')
     if answer == 'y':
         print('Answer is yes !!!')
         get_user_item()
-        #break
     elif answer == 'Y':
         print('Answer is yes !!!')
         get_user_item()
-        #break
-# *** Need to change function call for n or N
     elif answer == 'n':
         print('Answer is no !!!')
         print(finance_dict)
-        #break
     elif answer == 'N':
         print('Answer is no !!!')
         print(finance_dict)
-        #break
     else:
         answer = input('> Enter y or Y for yes, n or N for no\n')
     print('end of try block')
