@@ -30,8 +30,8 @@ def start_app():
 
     print('> You should round your figures to the nearest whole number and')
     print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
-    print('> Begin by entering your monthly income and press return')
-    print('> after each entry made:\n')
+    input('> Please press return to begin.')
+    clear()
 
 
 def clear():
@@ -55,6 +55,8 @@ def get_income():
     Run a while loop to ensure input data is a whole
     number or 0.
     '''
+    print('> Begin by entering your monthly income and press return')
+    print('> after each entry made:\n')
     global INCOME
     while True:
         try:
@@ -249,6 +251,11 @@ def closing_summary():
     print(f'> Your annual expenditure: {annual_expenditure}\n')
     print(f'> Your weekly income: {weekly_income}\n')
     print(f'> Your weekly expenditure: {weekly_expenditure}\n')
+    print('> DISCLAIMER:\n')
+    print('> This app is for illustrative purposes only so please')
+    print('> consult an independent financial advisor if necessary.\n')
+    print('> Press Y to try again or N to exit.')
+
 
 
 if __name__ == '__main__':
@@ -257,7 +264,6 @@ if __name__ == '__main__':
     '''
     clear()
     start_app()
-    # print(finance_dict)
     get_income()
     item_cost = str_to_int(finance_dict)
     item_list(finance_dict)
