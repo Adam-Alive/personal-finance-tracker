@@ -215,15 +215,24 @@ def calculate_total_expenditure(data):
 def calculate_monthly_surplus(income, expenditure):
     '''
     Subtract expenditure from income to calculate surplus.
+    Add a thousand comma separator to output figures.
     Print out summary of financial data with messages.
     '''
     surplus = income - expenditure
+
+    # Adds a thousand comma separator
+    convert = '{:,}'
+    income = convert.format(income)
+    expenditure = convert.format(expenditure)
+    # surplus = convert.format(surplus) ** Issues with this conversion as now a str.
+
+    # Prints out first part of financial summary.
     print('\n')
     print(f'> YOUR FINANCIAL SUMMARY\n')
     print(f'> Monthly income: {income}\n')
     print(f'> Monthly expenditure: {expenditure}\n')
     print(f'> Income less expenditure: {surplus}\n')
-    # clear()
+    # Issues with thousand comma separator - see above
     if surplus > 0:
         print(f'> You have a monthly disposable income of {surplus} and can')
         print(f'> consider additional savings, investments or expenditure.\n')
@@ -232,21 +241,32 @@ def calculate_monthly_surplus(income, expenditure):
     else:
         print(f'> You have a monthly deficit of {surplus} and')
         print(f'> should review your expenditure.\n')
-    #  ** TIM - CALL THIS FUNCTION HERE OR STAY IN MAIN?  
+    #  ** TIM - CALL THIS FUNCTION HERE OR STAY IN MAIN?
     # closing_summary()
 
 
 def closing_summary():
     '''
     Calculate annual and weekly finance figures.
-    Print out closing summary of financial data with messages.
+    Add a thousand comma separator to output figures.
+    Print out summary of financial data with messages.
     Ask user to restart or exit.
     '''
     annual_income = INCOME * 12
     annual_expenditure = MONTHLY_EXPENDITURE * 12
+
     # Weekly figures are rounded down to nearest whole number.
     weekly_income = annual_income // 52
     weekly_expenditure = annual_expenditure // 52
+
+    # Adds a thousand comma separator
+    convert = '{:,}'
+    annual_income = convert.format(annual_income)
+    annual_expenditure = convert.format(annual_expenditure)
+    weekly_income = convert.format(weekly_income)
+    weekly_expenditure = convert.format(weekly_expenditure)
+
+    # Prints out second part of financial summary.
     print(f'> Your annual income: {annual_income}\n')
     print(f'> Your annual expenditure: {annual_expenditure}\n')
     print(f'> Your weekly income: {weekly_income}\n')
@@ -254,6 +274,8 @@ def closing_summary():
     print('> DISCLAIMER:\n')
     print('> This app is for illustrative purposes only so please')
     print('> consult an independent financial advisor if necessary.\n')
+
+    # Restart or exit.
     global RESTART
     RESTART = input('> Enter 1 to restart or 2 to exit.\n')
     restart_or_close()
