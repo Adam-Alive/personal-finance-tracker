@@ -169,15 +169,12 @@ def ask_user_item():
         # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
         calculate_total_expenditure(finance_dict)
         clear()
-        # print(finance_dict)
     elif answer == 'N':
         # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
         calculate_total_expenditure(finance_dict)
         clear()
-        # print(finance_dict)
     else:
         answer = input('> Enter y or Y for yes, n or N for no\n')
-    # print('end of try block')
 
 
 def get_user_item():
@@ -258,7 +255,7 @@ def closing_summary():
     print('> This app is for illustrative purposes only so please')
     print('> consult an independent financial advisor if necessary.\n')
     global RESTART
-    RESTART = input('> Enter 1 to try again or 2 to exit.\n')
+    RESTART = input('> Enter 1 to restart or 2 to exit.\n')
     restart_or_close()
 
 
