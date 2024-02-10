@@ -21,8 +21,8 @@ def start_app():
     print('> (after tax and other deductions), followed by various')
     print('> costs for rent, utilities, food and leisure etc.\n')
 
-    print('> There are 12 expenditure fields and 3 more blank fields')
-    print('> where you can enter expenditure items not covered already.\n')
+    print('> There are 10 expenditure fields and you will be able')
+    print('> to enter expenditure items not already listed.\n')
 
     print('> The output applies to any currency and will provide')
     print('> a summary of your weekly, monthly and annual finances.\n')
@@ -235,13 +235,15 @@ def calculate_monthly_surplus(income, expenditure):
     else:
         print(f'> You have a monthly deficit of {surplus} and')
         print(f'> should review your expenditure.\n')
-    # closing_summary() ** TIM - CALL THIS FUNCTION HERE OR STAY IN MAIN?
+    #  ** TIM - CALL THIS FUNCTION HERE OR STAY IN MAIN?  
+    # closing_summary()
 
 
 def closing_summary():
     '''
     Calculate annual and weekly finance figures.
     Print out closing summary of financial data with messages.
+    Ask user to restart or exit.
     '''
     annual_income = INCOME * 12
     annual_expenditure = MONTHLY_EXPENDITURE * 12
@@ -274,7 +276,7 @@ def restart_or_close():
         print('> Thank you for using the Personal Finance Tracker.\n')
         print('> Goodbye!')
     else:
-        RESTART = input('> Enter 1 to try again or 2 to exit.\n')
+        RESTART = input('> Enter 1 to restart or 2 to exit.\n')
 
 
 if __name__ == '__main__':
@@ -289,3 +291,4 @@ if __name__ == '__main__':
     calculate_total_expenditure(finance_dict)
     calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
     closing_summary()
+    restart_or_close()
