@@ -2,6 +2,7 @@ import os
 
 global INCOME
 global MONTHLY_EXPENDITURE
+global RESTART
 
 dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food']
 dict_values = '0'
@@ -30,7 +31,7 @@ def start_app():
 
     print('> You should round your figures to the nearest whole number and')
     print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
-    input('> Please press return to begin.')
+    input('> Please press return to begin.\n')
     clear()
 
 
@@ -254,8 +255,26 @@ def closing_summary():
     print('> DISCLAIMER:\n')
     print('> This app is for illustrative purposes only so please')
     print('> consult an independent financial advisor if necessary.\n')
-    print('> Press Y to try again or N to exit.')
+    global RESTART
+    RESTART = input('> Enter 1 to try again or 2 to exit.\n')
+    restart_or_close()
 
+
+def restart_or_close():
+    '''
+    Return to start if user enters 1.
+    Print closing message if user enters 2.
+    '''
+    global RESTART
+    if RESTART == '1':
+        clear()
+        get_income()
+    elif RESTART == '2':
+        clear()
+        print('> Thank you for using the Personal Finance Tracker.\n')
+        print('> Goodbye!')
+    else:
+        RESTART = input('> Enter 1 to try again or 2 to exit.\n')
 
 
 if __name__ == '__main__':
