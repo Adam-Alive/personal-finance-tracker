@@ -31,7 +31,7 @@ def start_app():
 
     print('> You should round your figures to the nearest whole number and')
     print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
-    input('> Please press RETURN to begin.\n')
+    input('> Please press RETURN to begin...\n')
     clear()
 
 
@@ -154,7 +154,7 @@ def item_list(data):
     MONTHLY_EXPENDITURE = convert.format(MONTHLY_EXPENDITURE)
 
     print(f'> MONTHLY EXPENDITURE: {MONTHLY_EXPENDITURE}\n')
-    input('> Please press RETURN to see your financial summary\n')
+    input('> Please press RETURN to see your financial summary...\n')
     clear()
 
 
@@ -217,8 +217,7 @@ def closing_summary():
     print(f'> Your annual expenditure: {annual_expenditure}\n')
     print(f'> Your weekly income: {weekly_income}\n')
     print(f'> Your weekly expenditure: {weekly_expenditure}\n')
-    print('> DISCLAIMER: This app is for illustrative purposes only so')
-    print('> please consult an independent financial advisor if necessary.\n')
+    print('> DISCLAIMER: This app is for illustrative purposes only.\n')
 
     # Restart or exit.
     global RESTART
