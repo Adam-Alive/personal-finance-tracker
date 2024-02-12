@@ -151,9 +151,11 @@ def item_list(data):
     # Adds a thousand comma separator
     global MONTHLY_EXPENDITURE
     convert = '{:,}'
-    MONTHLY_EXPENDITURE = convert.format(MONTHLY_EXPENDITURE)
+    # MONTHLY_EXPENDITURE = convert.format(MONTHLY_EXPENDITURE)
+    monthly_expenditure = convert.format(MONTHLY_EXPENDITURE)
 
-    print(f'> MONTHLY EXPENDITURE: {MONTHLY_EXPENDITURE}\n')
+    # print(f'> MONTHLY EXPENDITURE: {MONTHLY_EXPENDITURE}\n')
+    print(f'> MONTHLY EXPENDITURE: {monthly_expenditure}\n')
     input('> Please press RETURN to see your financial summary...\n')
     clear()
 
@@ -170,24 +172,26 @@ def calculate_monthly_surplus(income, expenditure):
     convert = '{:,}'
     income = convert.format(income)
     expenditure = convert.format(expenditure)
-    # surplus = convert.format(surplus) ** Issues with this conversion as now a str.
+    # Issues with this conversion as now a str.
+    # surplus = convert.format(surplus) 
 
     # Prints out first part of financial summary.
     print('\n')
     print(f'> YOUR FINANCIAL SUMMARY\n')
     print(f'> Monthly income: {income}\n')
     print(f'> Monthly expenditure: {expenditure}\n')
-    print(f'> Income less expenditure: {surplus}\n')
-    # Issues with thousand comma separator - see above
+    # print(f'> Income less expenditure: {surplus}\n')
+    print(f'> Income less expenditure: {convert.format(surplus)}\n')
+    # Issues with thousand comma separator - see above.
     if surplus > 0:
-        print(f'> You have a monthly disposable income of {surplus} and can')
+        print(f'> You have a monthly disposable income of {convert.format(surplus)} and can')
         print(f'> consider additional savings, investments or expenditure.\n')
     elif surplus == 0:
         print(f'> Your expenditure matches your income exactly!\n')
     else:
-        print(f'> You have a monthly deficit of {surplus} and')
+        print(f'> You have a monthly deficit of {convert.format(surplus)} and')
         print(f'> should review your expenditure.\n')
-    #  ** TIM - CALL THIS FUNCTION HERE OR STAY IN MAIN?
+    #  ** CALL THIS FUNCTION HERE OR STAY IN MAIN?
     # closing_summary()
 
 
