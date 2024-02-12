@@ -5,9 +5,6 @@
 In this section, you will include a few paragraphs providing an overview of your project.
 Essentially, this part is your "sales pitch".
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
 In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
 
 Consider adding a mockup image using the "Am I Responsive" website.
@@ -134,30 +131,11 @@ Feel free to delete any unused items below as necessary.
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-- [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
-- [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
-- [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
-- [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Codeanywhere](https://codeanywhere.com) used as a cloud-based IDE for development.
-- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
 
 ## Data Model
 
@@ -206,12 +184,8 @@ The primary functions used on this application are:
 
 I've used the following Python packages and/or external imported packages.
 
-- `gspread`: used with the Google Sheets API
-- `google.oauth2.service_account`: used for the Google Sheets API credentials
-- `time`: used for adding time delays
 - `os`: used for adding a `clear()` function
 - `colorama`: used for including color in the terminal
-- `random`: used to get a random choice from a list
 
 ## Testing
 
@@ -382,15 +356,4 @@ by sending yourself the following command: `!freemedia`.
 
 ### Acknowledgements
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN), for his invaluable advice, guidance and support throughout the development of this project.
