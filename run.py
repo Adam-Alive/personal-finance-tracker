@@ -66,91 +66,25 @@ def get_income():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0\n')
-    get_rent_mortgage()
+    # get_rent_mortgage()
+    # get_expenditure(finance_dict)
 
 
-def get_rent_mortgage():
+def get_expenditure(data):
     '''
     Get expenditure data input by the user.
     Update the finance_dict with this value.
     '''
     print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            rent_mortgage = int(input('> Rent or mortgage: '))
-            finance_dict['rent_mortgage'] = rent_mortgage
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
-    get_gas()
-
-
-def get_gas():
-    '''
-    Get expenditure data input by the user.
-    Update the finance_dict with this value.
-    '''
-    print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            gas = int(input('> Gas: '))
-            finance_dict['gas'] = gas
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
-    get_electric()
-
-
-def get_electric():
-    '''
-    Get expenditure data input by the user.
-    Update the finance_dict with this value.
-    '''
-    print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            electric = int(input('> Electric: '))
-            finance_dict['electric'] = electric
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
-    get_phone()
-
-
-def get_phone():
-    '''
-    Get expenditure data input by the user.
-    Update the finance_dict with this value.
-    '''
-    print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            phone = int(input('> Phone: '))
-            finance_dict['phone'] = phone
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
-    get_food()
-
-
-def get_food():
-    '''
-    Get expenditure data input by the user.
-    Update the finance_dict with this value.
-    '''
-    print('> Enter the amount you spend each month on: \n')
-    while True:
-        try:
-            food = int(input('> Food: '))
-            finance_dict['food'] = food
-            clear()
-            break
-        except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
+    for key, value in finance_dict.items():
+        while True:
+            try:
+                value = int(input(f'> {key}: \n'))
+                finance_dict[key] = value
+                clear()
+                break
+            except ValueError:
+                print('> Data is not valid, please enter a whole number or 0')
     ask_user_item()
 
 
@@ -318,6 +252,7 @@ if __name__ == '__main__':
     start_app()
     get_income()
     item_cost = str_to_int(finance_dict)
+    get_expenditure(finance_dict)
     item_list(finance_dict)
     calculate_total_expenditure(finance_dict)
     calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
