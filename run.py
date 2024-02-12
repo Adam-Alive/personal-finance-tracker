@@ -31,7 +31,7 @@ def start_app():
 
     print('> You should round your figures to the nearest whole number and')
     print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
-    input('> Please press return to begin.\n')
+    input('> Please press RETURN to begin.\n')
     clear()
 
 
@@ -56,7 +56,7 @@ def get_income():
     Run a while loop to ensure input data is a whole
     number or 0.
     '''
-    print('> Begin by entering your monthly income and press return')
+    print('> Begin by entering your monthly income and press RETURN')
     print('> after each entry made:\n')
     global INCOME
     while True:
