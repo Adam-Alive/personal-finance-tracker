@@ -195,21 +195,33 @@ def get_user_item():
     ask_user_item()
 
 
-def item_list(data):
-    '''
-    Get finance_dict and print list of all expenditure items.
-    '''
-    print('> YOUR EXPENDITURE LIST\n')
-    for key, value in finance_dict.items():
-        print(f'> {key.capitalize()}: {value}')
-
-
 def calculate_total_expenditure(data):
     '''
     Calculate total monthly expenditure.
     '''
     global MONTHLY_EXPENDITURE
     MONTHLY_EXPENDITURE = sum(data.values())
+
+
+def item_list(data):
+    '''
+    Get finance_dict and print list of all expenditure items.
+    Add a thousand comma separator to monthly expenditure output.
+    Print monthly expenditure.
+    '''
+    print('> YOUR EXPENDITURE\n')
+    for key, value in finance_dict.items():
+        print(f'> {key.capitalize()}: {value}')
+    print('\n')
+
+    # Adds a thousand comma separator
+    global MONTHLY_EXPENDITURE
+    convert = '{:,}'
+    MONTHLY_EXPENDITURE = convert.format(MONTHLY_EXPENDITURE)
+
+    print(f'> MONTHLY EXPENDITURE: {MONTHLY_EXPENDITURE}\n')
+    input('> Please press RETURN to see your financial summary\n')
+    clear()
 
 
 def calculate_monthly_surplus(income, expenditure):
