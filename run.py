@@ -172,17 +172,13 @@ def calculate_monthly_surplus(income, expenditure):
     convert = '{:,}'
     income = convert.format(income)
     expenditure = convert.format(expenditure)
-    # Issues with this conversion as now a str.
-    # surplus = convert.format(surplus) 
 
     # Prints out first part of financial summary.
     print('\n')
     print(f'> YOUR FINANCIAL SUMMARY\n')
     print(f'> Monthly income: {income}\n')
     print(f'> Monthly expenditure: {expenditure}\n')
-    # print(f'> Income less expenditure: {surplus}\n')
     print(f'> Income less expenditure: {convert.format(surplus)}\n')
-    # Issues with thousand comma separator - see above.
     if surplus > 0:
         print(f'> You have a monthly disposable income of {convert.format(surplus)} and can')
         print(f'> consider additional savings, investments or expenditure.\n')
