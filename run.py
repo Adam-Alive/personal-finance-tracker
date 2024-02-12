@@ -78,9 +78,10 @@ def get_expenditure(data):
     for key, value in finance_dict.items():
         while True:
             try:
-                value = int(input(f'> {key}: \n'))
+                value = int(input(f'> {key.capitalize()}: \n'))
                 finance_dict[key] = value
                 clear()
+                print('> Enter the amount you spend each month on: \n')
                 break
             except ValueError:
                 print('> Data is not valid, please enter a whole number or 0')
@@ -216,9 +217,8 @@ def closing_summary():
     print(f'> Your annual expenditure: {annual_expenditure}\n')
     print(f'> Your weekly income: {weekly_income}\n')
     print(f'> Your weekly expenditure: {weekly_expenditure}\n')
-    print('> DISCLAIMER:\n')
-    print('> This app is for illustrative purposes only so please')
-    print('> consult an independent financial advisor if necessary.\n')
+    print('> DISCLAIMER: This app is for illustrative purposes only so')
+    print('> please consult an independent financial advisor if necessary.\n')
 
     # Restart or exit.
     global RESTART
