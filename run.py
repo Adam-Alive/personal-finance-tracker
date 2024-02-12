@@ -66,14 +66,13 @@ def get_income():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0\n')
-    # get_rent_mortgage()
     # get_expenditure(finance_dict)
 
 
 def get_expenditure(data):
     '''
     Get expenditure data input by the user.
-    Update the finance_dict with this value.
+    Update the finance_dict with these values.
     '''
     print('> Enter the amount you spend each month on: \n')
     for key, value in finance_dict.items():
