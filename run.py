@@ -104,7 +104,7 @@ def ask_user_item():
         calculate_total_expenditure(finance_dict)
         clear()
     elif answer == 'N':
-        # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+        # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
         calculate_total_expenditure(finance_dict)
         clear()
     else:
@@ -116,7 +116,6 @@ def get_user_item():
     Ask user to input name of expenditure item and amount.
     Update the finance_dict with this key and value.
     '''
-    # print('> TEST: \n')
     item_key = input('> Name of item: ')
     while True:
         try:
@@ -146,16 +145,13 @@ def item_list(data):
     print('> YOUR EXPENDITURE\n')
     for key, value in finance_dict.items():
         print(f'> {key.capitalize()}: {value}')
-        # print(f'> {key}: {value}')
     print('\n')
 
-    # Adds a thousand comma separator
+    # Adds a thousand comma separator.
     global MONTHLY_EXPENDITURE
     convert = '{:,}'
-    # MONTHLY_EXPENDITURE = convert.format(MONTHLY_EXPENDITURE)
     monthly_expenditure = convert.format(MONTHLY_EXPENDITURE)
 
-    # print(f'> MONTHLY EXPENDITURE: {MONTHLY_EXPENDITURE}\n')
     print(f'> MONTHLY EXPENDITURE: {monthly_expenditure}\n')
     input('> Please press RETURN to see your financial summary...\n')
     clear()
@@ -169,7 +165,7 @@ def calculate_monthly_surplus(income, expenditure):
     '''
     surplus = income - expenditure
 
-    # Adds a thousand comma separator
+    # Adds a thousand comma separator.
     convert = '{:,}'
     income = convert.format(income)
     expenditure = convert.format(expenditure)
