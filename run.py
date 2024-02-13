@@ -4,7 +4,7 @@ global INCOME
 global MONTHLY_EXPENDITURE
 global RESTART
 
-dict_keys = ['rent_mortgage', 'gas', 'electric', 'phone', 'food']
+dict_keys = ['Rent or mortgage', 'Gas', 'Electricity', 'Phone', 'Food']
 dict_values = '0'
 finance_dict = dict.fromkeys(dict_keys, dict_values)
 
@@ -78,7 +78,7 @@ def get_expenditure(data):
     for key, value in finance_dict.items():
         while True:
             try:
-                value = int(input(f'> {key.capitalize()}: \n'))
+                value = int(input(f'> {key}: \n'))
                 finance_dict[key] = value
                 clear()
                 print('> Enter the amount you spend each month on: \n')
@@ -100,7 +100,7 @@ def ask_user_item():
     elif answer == 'Y':
         get_user_item()
     elif answer == 'n':
-        # TIM ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+        # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
         calculate_total_expenditure(finance_dict)
         clear()
     elif answer == 'N':
@@ -146,6 +146,7 @@ def item_list(data):
     print('> YOUR EXPENDITURE\n')
     for key, value in finance_dict.items():
         print(f'> {key.capitalize()}: {value}')
+        # print(f'> {key}: {value}')
     print('\n')
 
     # Adds a thousand comma separator
@@ -174,7 +175,6 @@ def calculate_monthly_surplus(income, expenditure):
     expenditure = convert.format(expenditure)
 
     # Prints out first part of financial summary.
-    print('\n')
     print(f'> YOUR FINANCIAL SUMMARY\n')
     print(f'> Monthly income: {income}\n')
     print(f'> Monthly expenditure: {expenditure}\n')
