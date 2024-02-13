@@ -85,6 +85,7 @@ def get_expenditure(data):
                 break
             except ValueError:
                 print('> Data is not valid, please enter a whole number or 0')
+    clear()
     ask_user_item()
 
 
