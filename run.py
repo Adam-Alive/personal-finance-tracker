@@ -89,7 +89,7 @@ def get_expenditure(data):
     ask_user_item()
 
 
-# def ask_user_item():
+# def ask_user_item(): ** THIS WAS INITIAL CODE, THEN I TRIED CODE BELOW **
     '''
     Ask user if they wish to enter more expenditure items.
     Validate input data for yes or no options.
@@ -110,7 +110,6 @@ def get_expenditure(data):
     else:
         answer = input('> Enter y or Y for yes, n or N for no\n')
     '''
-
 
 
 def ask_user_item():
@@ -138,9 +137,10 @@ def ask_user_item():
                 calculate_total_expenditure(finance_dict)
                 clear()
                 break
-        except:
+        except ValueError:
             # answer = input('> Enter y or Y for yes, n or N for no\n')
             print('> Enter y or Y for yes, n or N for no\n')
+
 
 def get_user_item():
     '''
