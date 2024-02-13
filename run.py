@@ -66,7 +66,7 @@ def get_income():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0\n')
-    # get_expenditure(finance_dict)
+    # get_expenditure(finance_dict) ** CALLED IN MAIN BUT NEED HERE TOO?
 
 
 def get_expenditure(data):
@@ -89,11 +89,10 @@ def get_expenditure(data):
     ask_user_item()
 
 
-def ask_user_item():
+# def ask_user_item():
     '''
     Ask user if they wish to enter more expenditure items.
     Validate input data for yes or no options.
-    '''
     print('> Would you like to add any more expenditure items not covered?\n')
     answer = input('> Enter y or Y for yes, n or N for no\n')
     if answer == 'y':
@@ -110,7 +109,38 @@ def ask_user_item():
         clear()
     else:
         answer = input('> Enter y or Y for yes, n or N for no\n')
+    '''
 
+
+
+def ask_user_item():
+    '''
+    Ask user if they wish to enter more expenditure items.
+    Validate input data for yes or no options.
+    '''
+    print('> Would you like to add any more expenditure items not covered?\n')
+    answer = input('> Enter y or Y for yes, n or N for no\n')
+    while True:
+        try:
+            if answer == 'y':
+                get_user_item()
+                break
+            elif answer == 'Y':
+                get_user_item()
+                break
+            elif answer == 'n':
+                # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+                calculate_total_expenditure(finance_dict)
+                clear()
+                break
+            elif answer == 'N':
+                # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+                calculate_total_expenditure(finance_dict)
+                clear()
+                break
+        except:
+            # answer = input('> Enter y or Y for yes, n or N for no\n')
+            print('> Enter y or Y for yes, n or N for no\n')
 
 def get_user_item():
     '''
@@ -177,8 +207,8 @@ def calculate_monthly_surplus(income, expenditure):
     print(f'> Monthly expenditure: {expenditure}\n')
     print(f'> Income less expenditure: {convert.format(surplus)}\n')
     if surplus > 0:
-        print(f'> You have a monthly disposable income of {convert.format(surplus)} and can')
-        print(f'> consider additional savings, investments or expenditure.\n')
+        print(f'> You have a monthly disposable income of {convert.format(surplus)} and')
+        print(f'> can consider additional savings or expenditure.\n')
     elif surplus == 0:
         print(f'> Your expenditure matches your income exactly!\n')
     else:
