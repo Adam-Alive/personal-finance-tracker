@@ -89,29 +89,6 @@ def get_expenditure(data):
     ask_user_item()
 
 
-# def ask_user_item(): ** THIS WAS INITIAL CODE, THEN I TRIED CODE BELOW **
-    '''
-    Ask user if they wish to enter more expenditure items.
-    Validate input data for yes or no options.
-    print('> Would you like to add any more expenditure items not covered?\n')
-    answer = input('> Enter y or Y for yes, n or N for no\n')
-    if answer == 'y':
-        get_user_item()
-    elif answer == 'Y':
-        get_user_item()
-    elif answer == 'n':
-        # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
-        calculate_total_expenditure(finance_dict)
-        clear()
-    elif answer == 'N':
-        # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
-        calculate_total_expenditure(finance_dict)
-        clear()
-    else:
-        answer = input('> Enter y or Y for yes, n or N for no\n')
-    '''
-
-
 def ask_user_item():
     '''
     Ask user if they wish to enter more expenditure items.
@@ -260,6 +237,9 @@ def restart_or_close():
     global RESTART
     if RESTART == '1':
         clear()
+        # finance_dict.clear() ** EMPTIES DICT COMPLETELY
+        # ** TEST PRINT SHOWS THAT DICT IS STILL POPULATED.
+        print(finance_dict)
         get_income()
     elif RESTART == '2':
         clear()
