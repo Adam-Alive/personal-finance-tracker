@@ -66,7 +66,6 @@ def get_income():
             clear()
             break
         except ValueError:
-            clear()
             print('> Data is not valid, please enter a whole number or 0\n')
     get_expenditure(FINANCE_DICT)
 
@@ -87,7 +86,6 @@ def get_expenditure(data):
                 print('> Enter the amount you spend each month on: \n')
                 break
             except ValueError:
-                clear()
                 print('> Data is not valid, please enter a whole number or 0\n')
     clear()
     ask_user_item()
@@ -127,7 +125,7 @@ def get_user_item():
             clear()
             break
         except ValueError:
-            print('> Data is not valid, please enter a whole number or 0')
+            print('> Data is not valid, please enter a whole number or 0\n')
     ask_user_item()
 
 
@@ -139,6 +137,7 @@ def calculate_total_expenditure(data):
     MONTHLY_EXPENDITURE = sum(data.values())
     clear()
     item_list(FINANCE_DICT)
+
 
 def item_list(data):
     '''
