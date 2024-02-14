@@ -6,7 +6,17 @@ global RESTART
 global FINANCE_DICT
 
 
+def clear():
+    '''
+    Clears the terminal window.
+    '''
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def setup_dict():
+    '''
+    Initiates dictionary for expenditure items.
+    '''
     global FINANCE_DICT
     dict_keys = ['Rent or mortgage', 'Gas', 'Electricity', 'Phone', 'Food']
     dict_values = 0
@@ -38,13 +48,6 @@ def start_app():
     input('> Please press RETURN to begin...\n')
     clear()
     get_income()
-
-
-def clear():
-    '''
-    Clears the terminal window.
-    '''
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 #def str_to_int():
@@ -109,7 +112,6 @@ def ask_user_item():
             get_user_item()
             break
         elif answer == 'n':
-            # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
             calculate_total_expenditure(FINANCE_DICT)
             clear()
             break
@@ -141,7 +143,8 @@ def calculate_total_expenditure(data):
     '''
     global MONTHLY_EXPENDITURE
     MONTHLY_EXPENDITURE = sum(data.values())
-
+    clear()
+    item_list(FINANCE_DICT)
 
 def item_list(data):
     '''
@@ -163,6 +166,7 @@ def item_list(data):
     print(f'> MONTHLY EXPENDITURE: {monthly_expenditure}\n')
     input('> Please press RETURN to see your financial summary...\n')
     clear()
+    calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
 
 
 def calculate_monthly_surplus(income, expenditure):
@@ -191,8 +195,7 @@ def calculate_monthly_surplus(income, expenditure):
     else:
         print(f'> You have a monthly deficit of {convert.format(surplus)} and')
         print(f'> should review your expenditure.\n')
-    #  ** CALL THIS FUNCTION HERE OR STAY IN MAIN?
-    # closing_summary()
+    closing_summary()
 
 
 def closing_summary():
@@ -253,17 +256,17 @@ def restart_or_close():
 
 if __name__ == '__main__':
     '''
-    Run all program functions
+    Run program initiation functions.
     '''
-    global FINANCE_DICT
+    #global FINANCE_DICT
     clear()
     setup_dict()
     start_app()
     # get_income()
     #str_to_int()
     # get_expenditure(finance_dict)
-    item_list(FINANCE_DICT)
-    calculate_total_expenditure(FINANCE_DICT)
-    calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
-    closing_summary()
+    # item_list(FINANCE_DICT)
+    #calculate_total_expenditure(FINANCE_DICT) called at 115
+    #calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
+    #closing_summary()
     # restart_or_close()
