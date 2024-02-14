@@ -3,10 +3,14 @@ import os
 global INCOME
 global MONTHLY_EXPENDITURE
 global RESTART
+global FINANCE_DICT
 
-dict_keys = ['Rent or mortgage', 'Gas', 'Electricity', 'Phone', 'Food']
-dict_values = '0'
-finance_dict = dict.fromkeys(dict_keys, dict_values)
+
+def setup_dict():
+    global FINANCE_DICT
+    dict_keys = ['Rent or mortgage', 'Gas', 'Electricity', 'Phone', 'Food']
+    dict_values = 0
+    FINANCE_DICT = dict.fromkeys(dict_keys, dict_values)
 
 
 def start_app():
@@ -33,6 +37,7 @@ def start_app():
     print('> enter 0 (zero) if an expenditure item does not apply to you.\n')
     input('> Please press RETURN to begin...\n')
     clear()
+    get_income()
 
 
 def clear():
@@ -42,12 +47,12 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def str_to_int(data):
-    '''
-    Converts all string values to integers
-    '''
-    for value in finance_dict.values():
-        item_cost = int(value)
+#def str_to_int():
+#    '''
+#    Converts all string values to integers
+#    '''
+#    for value in finance_dict.values():
+#        int(value)
 
 
 def get_income():
@@ -56,9 +61,10 @@ def get_income():
     Run a while loop to ensure input data is a whole
     number or 0.
     '''
+    global INCOME
+    global FINANCE_DICT
     print('> Begin by entering your monthly income and press RETURN')
     print('> after each entry made:\n')
-    global INCOME
     while True:
         try:
             INCOME = int(input('> Monthly income: \n'))
@@ -66,7 +72,7 @@ def get_income():
             break
         except ValueError:
             print('> Data is not valid, please enter a whole number or 0\n')
-    # get_expenditure(finance_dict) ** CALLED IN MAIN BUT NEED HERE TOO?
+    get_expenditure(FINANCE_DICT)
 
 
 def get_expenditure(data):
@@ -74,12 +80,13 @@ def get_expenditure(data):
     Get expenditure data input by the user.
     Update the finance_dict with these values.
     '''
+    global FINANCE_DICT
     print('> Enter the amount you spend each month on: \n')
-    for key, value in finance_dict.items():
+    for key, value in FINANCE_DICT.items():
         while True:
             try:
                 value = int(input(f'> {key}: \n'))
-                finance_dict[key] = value
+                FINANCE_DICT[key] = value
                 clear()
                 print('> Enter the amount you spend each month on: \n')
                 break
@@ -94,29 +101,20 @@ def ask_user_item():
     Ask user if they wish to enter more expenditure items.
     Validate input data for yes or no options.
     '''
-    print('> Would you like to add any more expenditure items not covered?\n')
-    answer = input('> Enter y or Y for yes, n or N for no\n')
+    global FINANCE_DICT
     while True:
-        try:
-            if answer == 'y':
-                get_user_item()
-                break
-            elif answer == 'Y':
-                get_user_item()
-                break
-            elif answer == 'n':
-                # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
-                calculate_total_expenditure(finance_dict)
-                clear()
-                break
-            elif answer == 'N':
-                # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
-                calculate_total_expenditure(finance_dict)
-                clear()
-                break
-        except ValueError:
-            # answer = input('> Enter y or Y for yes, n or N for no\n')
-            print('> Enter y or Y for yes, n or N for no\n')
+        print('> Would you like to add any more expenditure items not covered?\n')
+        answer = input('> Enter Y for yes, N for no\n').lower()
+        if answer == 'y':
+            get_user_item()
+            break
+        elif answer == 'n':
+            # ** I CALL THIS FUNCTION HERE - HAVE CALLED IN MAIN TOO?
+            calculate_total_expenditure(FINANCE_DICT)
+            clear()
+            break
+        else:
+            print(f'> {answer} is invalid. Enter Y or N.\n')
 
 
 def get_user_item():
@@ -124,11 +122,12 @@ def get_user_item():
     Ask user to input name of expenditure item and amount.
     Update the finance_dict with this key and value.
     '''
+    global FINANCE_DICT
     item_key = input('> Name of item: ')
     while True:
         try:
             item_value = int(input(f'> Enter the amount you spend each month on: {item_key}\n'))
-            finance_dict.update({item_key: item_value})
+            FINANCE_DICT.update({item_key: item_value})
             clear()
             break
         except ValueError:
@@ -150,8 +149,9 @@ def item_list(data):
     Add a thousand comma separator to monthly expenditure output.
     Print monthly expenditure.
     '''
+    global FINANCE_DICT
     print('> YOUR EXPENDITURE\n')
-    for key, value in finance_dict.items():
+    for key, value in FINANCE_DICT.items():
         print(f'> {key.capitalize()}: {value}')
     print('\n')
 
@@ -224,8 +224,8 @@ def closing_summary():
     print('> DISCLAIMER: This app is for illustrative purposes only.\n')
 
     # Restart or exit.
-    global RESTART
-    RESTART = input('> Enter 1 to restart or 2 to exit.\n')
+    # global RESTART
+    # RESTART = input('> Enter 1 to restart or 2 to exit.\n')
     restart_or_close()
 
 
@@ -235,31 +235,35 @@ def restart_or_close():
     Print closing message if user enters 2.
     '''
     global RESTART
-    if RESTART == '1':
-        clear()
-        # finance_dict.clear() ** EMPTIES DICT COMPLETELY
-        # ** TEST PRINT SHOWS THAT DICT IS STILL POPULATED.
-        print(finance_dict)
-        get_income()
-    elif RESTART == '2':
-        clear()
-        print('> Thank you for using the Personal Finance Tracker.\n')
-        print('> Goodbye!')
-    else:
+    while True:
         RESTART = input('> Enter 1 to restart or 2 to exit.\n')
+        if RESTART == '1':
+            clear()
+            break
+        elif RESTART == '2':
+            clear()
+            print('> Thank you for using the Personal Finance Tracker.\n')
+            print('> Goodbye!')
+            exit()
+        else:
+            print(f'{RESTART} is invalid. Enter 1 or 2\n')
+    setup_dict()
+    get_income()
 
 
 if __name__ == '__main__':
     '''
     Run all program functions
     '''
+    global FINANCE_DICT
     clear()
+    setup_dict()
     start_app()
-    get_income()
-    item_cost = str_to_int(finance_dict)
-    get_expenditure(finance_dict)
-    item_list(finance_dict)
-    calculate_total_expenditure(finance_dict)
+    # get_income()
+    #str_to_int()
+    # get_expenditure(finance_dict)
+    item_list(FINANCE_DICT)
+    calculate_total_expenditure(FINANCE_DICT)
     calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
     closing_summary()
-    restart_or_close()
+    # restart_or_close()
