@@ -148,7 +148,7 @@ def item_list(data):
     global FINANCE_DICT
     print('> YOUR EXPENDITURE\n')
     for key, value in FINANCE_DICT.items():
-        print(f'> {key.capitalize()}: {value}')
+        print(f'> {key.capitalize()}: {value:,}')
     print('\n')
 
     # Adds a thousand comma separator.
