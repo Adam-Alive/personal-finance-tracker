@@ -50,14 +50,6 @@ def start_app():
     get_income()
 
 
-#def str_to_int():
-#    '''
-#    Converts all string values to integers
-#    '''
-#    for value in finance_dict.values():
-#        int(value)
-
-
 def get_income():
     '''
     Get income data input by the user.
@@ -74,6 +66,7 @@ def get_income():
             clear()
             break
         except ValueError:
+            clear()
             print('> Data is not valid, please enter a whole number or 0\n')
     get_expenditure(FINANCE_DICT)
 
@@ -94,7 +87,8 @@ def get_expenditure(data):
                 print('> Enter the amount you spend each month on: \n')
                 break
             except ValueError:
-                print('> Data is not valid, please enter a whole number or 0')
+                clear()
+                print('> Data is not valid, please enter a whole number or 0\n')
     clear()
     ask_user_item()
 
@@ -125,7 +119,7 @@ def get_user_item():
     Update the finance_dict with this key and value.
     '''
     global FINANCE_DICT
-    item_key = input('> Name of item: ')
+    item_key = input('> Name of item: \n')
     while True:
         try:
             item_value = int(input(f'> Enter the amount you spend each month on: {item_key}\n'))
@@ -212,7 +206,7 @@ def closing_summary():
     weekly_income = annual_income // 52
     weekly_expenditure = annual_expenditure // 52
 
-    # Adds a thousand comma separator
+    # Adds a thousand comma separator.
     convert = '{:,}'
     annual_income = convert.format(annual_income)
     annual_expenditure = convert.format(annual_expenditure)
@@ -225,17 +219,13 @@ def closing_summary():
     print(f'> Your weekly income: {weekly_income}\n')
     print(f'> Your weekly expenditure: {weekly_expenditure}\n')
     print('> DISCLAIMER: This app is for illustrative purposes only.\n')
-
-    # Restart or exit.
-    # global RESTART
-    # RESTART = input('> Enter 1 to restart or 2 to exit.\n')
     restart_or_close()
 
 
 def restart_or_close():
     '''
     Return to start if user enters 1.
-    Print closing message if user enters 2.
+    Exit program and print closing message if user enters 2.
     '''
     global RESTART
     while True:
@@ -258,15 +248,6 @@ if __name__ == '__main__':
     '''
     Run program initiation functions.
     '''
-    #global FINANCE_DICT
     clear()
     setup_dict()
     start_app()
-    # get_income()
-    #str_to_int()
-    # get_expenditure(finance_dict)
-    # item_list(FINANCE_DICT)
-    #calculate_total_expenditure(FINANCE_DICT) called at 115
-    #calculate_monthly_surplus(INCOME, MONTHLY_EXPENDITURE)
-    #closing_summary()
-    # restart_or_close()
