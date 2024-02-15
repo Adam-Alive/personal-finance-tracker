@@ -40,7 +40,7 @@ def start_app():
     print('> (after tax and other deductions), followed by various')
     print('> costs for rent, utilities, food and leisure etc.\n')
 
-    print('> There are 10 expenditure fields and you will be able')
+    print('> There are 15 expenditure fields and you will be able')
     print('> to enter expenditure items not already listed.\n')
 
     print('> The output applies to any currency and will provide')
