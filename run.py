@@ -18,10 +18,12 @@ def setup_dict():
     Initiates dictionary for expenditure items.
     '''
     global FINANCE_DICT
-    dict_keys = ['Rent or mortgage', 'Travel', 'Council tax', 'Food', 
-    'Childcare', 'Pension contributions', 'Savings', 'Broadband',
-    'Electricity', 'Gas', 'Water rates', 'Insurance', 'Phone',
-    'Television', 'Entertainment']
+    dict_keys = [
+                'Rent or mortgage', 'Travel', 'Council tax', 'Food',
+                'Childcare', 'Pension contributions', 'Savings',
+                'Broadband', 'Electricity', 'Gas', 'Water rates',
+                'Insurance', 'Phone', 'Television', 'Entertainment'
+                ]
     dict_values = 0
     FINANCE_DICT = dict.fromkeys(dict_keys, dict_values)
 
