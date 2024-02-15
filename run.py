@@ -86,7 +86,9 @@ def get_expenditure(data):
                 print('> Enter the amount you spend each month on: \n')
                 break
             except ValueError:
-                print('> Data is not valid, please enter a whole number or 0\n')
+                print(
+                    '> Data is not valid, please enter a whole number or 0\n'
+                    )
     clear()
     ask_user_item()
 
@@ -98,7 +100,9 @@ def ask_user_item():
     '''
     global FINANCE_DICT
     while True:
-        print('> Would you like to add any more expenditure items not covered?\n')
+        print(
+         '> Would you like to add any more expenditure items not covered?\n'
+        )
         answer = input('> Enter Y for yes, N for no\n').lower()
         if answer == 'y':
             get_user_item()
@@ -120,7 +124,9 @@ def get_user_item():
     item_key = input('> Name of item: \n')
     while True:
         try:
-            item_value = int(input(f'> Enter the amount you spend each month on: {item_key}\n'))
+            item_value = int(input(
+                f'> Enter the amount you spend each month on: {item_key}\n'
+            ))
             FINANCE_DICT.update({item_key: item_value})
             clear()
             break
@@ -181,13 +187,19 @@ def calculate_monthly_surplus(income, expenditure):
     print(f'> Monthly expenditure: {expenditure}\n')
     print(f'> Income less expenditure: {convert.format(surplus)}\n')
     if surplus > 0:
-        print(f'> You have a monthly disposable income of {convert.format(surplus)} and')
-        print(f'> can consider additional savings or expenditure.\n')
+        print(
+              '> You have a monthly disposable income of '
+              f'{convert.format(surplus)} and can'
+            )
+        print(f'> consider additional savings or expenditure.\n')
     elif surplus == 0:
         print(f'> Your expenditure matches your income exactly!\n')
     else:
-        print(f'> You have a monthly deficit of {convert.format(surplus)} and')
-        print(f'> should review your expenditure.\n')
+        print(
+              '> You have a monthly deficit of '
+              f'{convert.format(surplus)} and should'
+                )
+        print(f'> review your expenditure.\n')
     closing_summary()
 
 
