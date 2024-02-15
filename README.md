@@ -20,17 +20,17 @@ The overall design is informed by Code Institute's command line interface (CLI) 
 
 ![screenshot](documentation/blank.png)
 
-Before coding, I planned the flow of the application.
+**Before coding, I planned the flow of the application.**
 
-Firstly with a flow chart using MS Word:
+Firstly, with a flow chart using MS Word:
 
 ![screenshot](documentation/flowchart.png)
 
-Secondly with a more detailed written framework:
+Secondly, with a more detailed written framework:
 
 ![screenshot](documentation/framework.png)
 
-And finally with a draft script with text to include in the code:
+And finally, with a draft script with text to include in the code:
 
 ![screenshot](documentation/script-1.png)
 
@@ -68,46 +68,53 @@ As a user I would like to restart the app to use again or exit.
 
 - **Pre-defined Expenditure Input**
 
-    - The first of 15 pre-defined expenditure fields is displayed and the user is invited to enter the amount they spend in each category.
+    - The first of 15 pre-defined expenditure fields is displayed (Rent or mortgage) and the user is invited to enter the amount they spend in each category.
+    - The second item displayed is Travel.
 
-![screenshot](documentation/expenditure-page.png)
+![screenshot](documentation/expenditure-1.png)
+
+
+![screenshot](documentation/expenditure-2.png)
 
 - **User-defined Expenditure Input**
 
-    - The user is asked if they want to enter their own expenditure items.
+    - After running through the 15 pre-defined items, the user is asked if they want to enter their own expenditure items.
+    - If they reply with a Y (or y) for yes, they are asked to enter the name of their item and then enter its cost. Two user entries are shown below.
 
-![screenshot](documentation/more-items-page.png)
+![screenshot](documentation/more-items-y-1.png)
 
-   - If they reply with a Y for yes, they are asked to enter the name of their item and then enter its cost.
+![screenshot](documentation/more-items-y-2.png)
 
-![screenshot](documentation/.png)
+- **No More Expenditure Input Required**
 
+    - The user can enter N (or n) for no and will be taken to the next feature.
+
+![screenshot](documentation/more-items-n.png)
 
 - **Expenditure Summary**
 
-    - Details 
+    - All the user's expenditure items and costs are listed and the total monthly expenditure shown. If entered, their own items have been capitalised in the list eg. Health insurance and Gym membership.
+     - The user is then invited to press RETURN to take them to their financial summary.
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/exp-summary.png)
 
 - **Financial Summary**
 
-    - Details 
+    - The user is presented with a summary of their monthly income and expenditure, and an indication of whether they have disposable income, a deficit, or spend exactly the same as they earn. 
+    - There is also a summary of annual and weekly income and expenditure.
+    - Shown below are the three possible outcomes for a surplus (disposable income), a deficit or income matching expenditure.
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/fin-sum-surplus.png)
 
-- **Closing Message**
+![screenshot](documentation/fin-sum-deficit.png)
 
-    - Details 
+![screenshot](documentation/fin-sum-match.png)
 
-![screenshot](documentation/feature01.png)
+- **Restart or Exit and Closing Message**
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+    - As shown in the three images above, the user may enter 1 to restart or 2 to exit the app. Restart returns the user to the Income Input feature and exit signs off with a closing message.
 
-Repeat as necessary for as many features as your site contains.
-
-Hint: the more, the merrier!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![screenshot](documentation/closing-message.png)
 
 ### Future Features
 
