@@ -1,83 +1,105 @@
 # [PERSONAL FINANCE TRACKER](https://aa-personal-finance-tracker-46a2e4082ae9.herokuapp.com)
 
 ## Project Purpose
-
 This app will enable users to calculate their monthly disposable income, based upon input of their monthly income and expenditure, and also indicate their total weekly, monthly and annual expenditure.
 
-Users can enter figures into 12 pre-defined expenditure fields and then add their own if necessary.
+Users can enter figures into 15 pre-defined expenditure fields and then add their own if necessary.
 
 Output will consist of a list of all expenditure items and a financial summary showing their disposable income (or deficit) and total weekly, monthly and annual expenditure.
+
+## Target Audience
+The target audience is adults who wish review their ongoing finances. This includes single people, couples, and those with children and the pre-defined expenditure fields allow for a range of lifestyles with the option of adding additional categories more personal to the user.
+
+The image below shows how the app is displayed on various devices.
 
 ![screenshot](documentation/mockup.png)
 
 ## UX
+### Initial Design
+The overall design is informed by Code Institute's command line interface (CLI) template, to be deployed on Heroku, with the terminal set to 80 columns by 24 rows.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![screenshot](documentation/blank.png)
 
-In this section, you will briefly explain your design processes.
+Before coding, I planned the flow of the application.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Firstly with a flow chart using MS Word:
+
+![screenshot](documentation/flowchart.png)
+
+Secondly with a more detailed written framework:
+
+![screenshot](documentation/framework.png)
+
+And finally with a draft script with text to include in the code:
+
+![screenshot](documentation/script-1.png)
+
+![screenshot](documentation/script-2.png)
+
+### Typography
+The CLI template uses Courier New.
 
 ## User Stories
+As a user I would like to see instructions about the app so that I can use it.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+As a user I would like to enter my financial data effectively.
 
-In this section, list all of your user stories for the project.
+As a user I would like to enter my own expenditure categories. 
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+As a user I would like to see a summary of my finances and disposable income.
 
-### New Site Users
-
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-
-### Returning Site Users
-
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+As a user I would like to restart the app to use again or exit.
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Existing Features
 
-- **Title for feature #1**
+- **Welcome and Instructions**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The first page welcomes the user to the app, outlines its purpose, and presents a clear set of instructions. The user is invited to press RETURN to begin.
+
+![screenshot](documentation/landing-page.png)
+
+- **Income Input**
+
+    - The user is invited to enter their monthly income, instructed to press RETURN after entry, and after every subsequent data entry.
+
+![screenshot](documentation/income-page.png)
+
+- **Pre-defined Expenditure Input**
+
+    - The first of 15 pre-defined expenditure fields is displayed and the user is invited to enter the amount they spend in each category.
+
+![screenshot](documentation/expenditure-page.png)
+
+- **User-defined Expenditure Input**
+
+    - The user is asked if they want to enter their own expenditure items.
+
+![screenshot](documentation/more-items-page.png)
+
+   - If they reply with a Y for yes, they are asked to enter the name of their item and then enter its cost.
+
+![screenshot](documentation/.png)
+
+
+- **Expenditure Summary**
+
+    - Details 
 
 ![screenshot](documentation/feature01.png)
 
-- **Title for feature #2**
+- **Financial Summary**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Details 
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/feature01.png)
 
-- **Title for feature #3**
+- **Closing Message**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Details 
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/feature01.png)
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
