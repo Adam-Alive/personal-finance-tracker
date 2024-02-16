@@ -157,16 +157,19 @@ def item_list(data):
     Print monthly expenditure.
     '''
     global FINANCE_DICT
-    print('> YOUR EXPENDITURE\n')
+    #print('> YOUR EXPENDITURE\n')
+    print('> YOUR EXPENDITURE:')
+    print('  -----------------')
     for key, value in FINANCE_DICT.items():
         print(f'> {key.capitalize()}: {value:,}')
-    print('\n')
+    #print('\n')
 
     # Adds a thousand comma separator.
     global MONTHLY_EXPENDITURE
     convert = '{:,}'
     monthly_expenditure = convert.format(MONTHLY_EXPENDITURE)
 
+    print('  --------------------')
     print(f'> MONTHLY EXPENDITURE: {monthly_expenditure}\n')
     input('> Please press RETURN to see your financial summary...\n')
     clear()
