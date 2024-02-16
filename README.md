@@ -8,7 +8,7 @@ Users can enter figures into 15 pre-defined expenditure fields and then add thei
 Output will consist of a list of all expenditure items and a financial summary showing their disposable income (or deficit) and total weekly, monthly and annual expenditure.
 
 ## Target Audience
-The target audience is adults who wish review their ongoing finances. This includes single people, couples, and those with children and the pre-defined expenditure fields allow for a range of lifestyles with the option of adding additional categories more personal to the user.
+The target audience is adults who wish review their ongoing finances and the pre-defined expenditure fields allow for a range of lifestyles with the option of adding categories more personal to the user.
 
 The image below shows how the app is displayed on various devices.
 
@@ -20,17 +20,17 @@ The overall design is informed by Code Institute's command line interface (CLI) 
 
 ![screenshot](documentation/blank.png)
 
-**Before coding, I planned the flow of the application.**
+-   **Before coding, I planned the flow of the application.**
 
-Firstly, with a flow chart using MS Word:
+-   **Firstly, with a flow chart using MS Word:**
 
 ![screenshot](documentation/flowchart.png)
 
-Secondly, with a more detailed written framework:
+-   **Secondly, with a more detailed written framework:**
 
 ![screenshot](documentation/framework.png)
 
-And finally, with a draft script with text to include in the code:
+-   **And finally, with a draft script with text to include in the code:**
 
 ![screenshot](documentation/script-1.png)
 
@@ -40,20 +40,19 @@ And finally, with a draft script with text to include in the code:
 The CLI template uses Courier New.
 
 ## User Stories
-As a user I would like to see instructions about the app so that I can use it.
+As a user, I would like to see instructions about the app so that I can use it.
 
-As a user I would like to enter my financial data effectively.
+As a user, I would like to enter my financial data effectively.
 
-As a user I would like to enter my own expenditure categories. 
+As a user, I would like to enter my own expenditure categories. 
 
-As a user I would like to see a summary of my finances and disposable income.
+As a user, I would like to see a summary of my finances and disposable income.
 
-As a user I would like to restart the app to use again or exit.
+As a user, I would like to restart the app to use again or exit.
 
 ## Features
 
 ### Existing Features
-
 - **Welcome and Instructions**
 
     - The first page welcomes the user to the app, outlines its purpose, and presents a clear set of instructions. The user is invited to press RETURN to begin.
@@ -102,7 +101,7 @@ As a user I would like to restart the app to use again or exit.
 
     - The user is presented with a summary of their monthly income and expenditure, and an indication of whether they have disposable income, a deficit, or spend exactly the same as they earn. 
     - There is also a summary of annual and weekly income and expenditure.
-    - Shown below are the three possible outcomes for a surplus (disposable income), a deficit or income matching expenditure.
+    - Shown below are the three possible outcomes for a surplus (disposable income), a deficit, or income matching expenditure.
 
 ![screenshot](documentation/fin-sum-surplus.png)
 
@@ -117,33 +116,14 @@ As a user I would like to restart the app to use again or exit.
 ![screenshot](documentation/closing-message.png)
 
 ### Future Features
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+- Title 
+    - Any 
+- Title 
+    - Any 
+- Title 
+    - Any colorama used for including color in the terminal
 
 ## Tools & Technologies Used
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
@@ -154,16 +134,9 @@ Feel free to delete any unused items below as necessary.
 ## Data Model
 
 ### Flowchart
+See above.
 
-To follow best practice, a flowchart was created for the app's logic,
-and mapped out before coding began using a free version of
-[Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) and/or [Draw.io](https://www.draw.io).
-
-Below is the flowchart of the main process of this Python program. It shows the entire cycle of the program.
-
-![screenshot](documentation/flowchart.png)
-
-### Classes & Functions
+### Functions
 
 The program uses classes as a blueprint for the project's objects (OOP). This allows for the object to be reusable.
 
@@ -182,24 +155,12 @@ The primary functions used on this application are:
 - `get_sales_data()`
     - Get sales figures input from the user.
 - `validate_data()`
-    - Converts all string values into integers.
-- `update_worksheet()`
-    - Update the relevant worksheet with the data provided.
-- `calculate_surplus_data()`
-    - Compare sales with stock and calculate the surplus for each item type.
-- `get_last_5_entries_sales()`
-    - Collects columns of data from sales worksheet.
-- `calculate_stock_data()`
-    -  Calculate the average stock for each item type, adding 10%.
-- `main()`
-    - Run all program functions.
+
 
 ### Imports
 
-I've used the following Python packages and/or external imported packages.
-
+I've used the following Python package:
 - `os`: used for adding a `clear()` function
-- `colorama`: used for including color in the terminal
 
 ## Testing
 
@@ -296,23 +257,7 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Credits
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Content
 
@@ -328,45 +273,17 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
 | [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 
 ### Media
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
 | [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ### Acknowledgements
 
