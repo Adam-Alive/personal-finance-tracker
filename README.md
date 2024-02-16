@@ -310,11 +310,9 @@ You can fork this repository by using the following steps:
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | Tool to help generate the Markdown files |
+| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | run.py |  How to add a thousand comma separator to integers for output; how to iterate through dict key:value pairs|
+| [StackOverflow](https://stackoverflow.com/a/10742904) | run.py | How to add a thousand comma separator to integers within a dictionary |
 
 ### Acknowledgements
 
