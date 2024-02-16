@@ -161,24 +161,18 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 ## User Story Testing
 
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
 Most of your project's **features** should already align with the **user stories**,
 so this should as simple as creating a table with the user story, matching with the re-used screenshot
 from the respective feature.
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a user, I would like to see instructions about the app so that I can use it.  | ![screenshot](documentation/feature01.png) |
+| As a user, I would like to enter my financial data effectively so that my finances can be calculated accurately. | ![screenshot](documentation/feature02.png) |
+| As a user, I would like to enter my own expenditure categories so that I can make the results more personal to me. | ![screenshot](documentation/feature03.png) |
+| As a user, I would like to see a summary of my finances and disposable income so that I can understand my financial circumstances. | ![screenshot](documentation/feature04.png) |
+| As a user, I would like to restart the app to use again or exit so that I can check my figures or leave the app with my data deleted. | ![screenshot](documentation/feature04.png) |
+
 
 ## Bugs
 

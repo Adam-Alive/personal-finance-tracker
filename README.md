@@ -47,13 +47,14 @@ The CLI template uses Courier New.
 
 As a user, I would like to see instructions about the app so that I can use it.
 
-As a user, I would like to enter my financial data effectively.
+As a user, I would like to enter my financial data effectively so that my finances can be calculated accurately.
 
-As a user, I would like to enter my own expenditure categories. 
+As a user, I would like to enter my own expenditure categories so that I can make the results more personal to me.
 
-As a user, I would like to see a summary of my finances and disposable income.
+As a user, I would like to see a summary of my finances and disposable income so that I can understand my financial circumstances.
 
-As a user, I would like to restart the app to use again or exit.
+As a user, I would like to restart the app to use again or exit so that I can check my figures or leave the app with my data deleted.
+
 
 ## Features
 
