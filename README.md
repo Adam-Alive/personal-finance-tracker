@@ -54,29 +54,41 @@ As a user, I would like to restart the app to use again or exit.
 
 ### Existing Features
 - **Welcome and Instructions**
-
     - The first page welcomes the user to the app, outlines its purpose, and presents a clear set of instructions. The user is invited to press RETURN to begin.
 
 ![screenshot](documentation/landing-page.png)
 
 - **Income Input**
-
     - The user is invited to enter their monthly income, instructed to press RETURN after entry, and after every subsequent data entry.
 
 ![screenshot](documentation/income-page.png)
 
 - **Pre-defined Expenditure Input**
-
     - The first of 15 pre-defined expenditure fields is displayed (Rent or mortgage) and the user is invited to enter the amount they spend in each category.
     - The second item displayed is Travel.
 
 ![screenshot](documentation/expenditure-1.png)
 
-
 ![screenshot](documentation/expenditure-2.png)
 
-- **User-defined Expenditure Input**
+-   **The 15 pre-defined expenditure categories are:**
+    -   Rent or mortgage
+    -   Travel
+    -   Council tax
+    -   Food
+    -   Childcare
+    -   Pension contributions
+    -   Savings
+    -   Broadband
+    -   Electricity
+    -   Gas
+    -   Water rates
+    -   Insurance
+    -   Phone
+    -   TV licence
+    -   Entertainment
 
+- **User-defined Expenditure Input**
     - After running through the 15 pre-defined items, the user is asked if they want to enter their own expenditure items.
     - If they reply with a Y (or y) for yes, they are asked to enter the name of their item and then enter its cost. Two user entries are shown below.
 
@@ -85,20 +97,17 @@ As a user, I would like to restart the app to use again or exit.
 ![screenshot](documentation/more-items-y-2.png)
 
 - **No More Expenditure Input Required**
-
     - The user can enter N (or n) for no and will be taken to the next feature.
 
 ![screenshot](documentation/more-items-n.png)
 
 - **Expenditure Summary**
-
     - All the user's expenditure items and costs are listed and the total monthly expenditure shown. If entered, their own items have been capitalised in the list eg. Health insurance and Gym membership.
      - The user is then invited to press RETURN to take them to their financial summary.
 
 ![screenshot](documentation/exp-summary.png)
 
 - **Financial Summary**
-
     - The user is presented with a summary of their monthly income and expenditure, and an indication of whether they have disposable income, a deficit, or spend exactly the same as they earn. 
     - There is also a summary of annual and weekly income and expenditure.
     - Shown below are the three possible outcomes for a surplus (disposable income), a deficit, or income matching expenditure.
@@ -110,7 +119,6 @@ As a user, I would like to restart the app to use again or exit.
 ![screenshot](documentation/fin-sum-match.png)
 
 - **Restart or Exit and Closing Message**
-
     - As shown in the three images above, the user may enter 1 to restart or 2 to exit the app. Restart returns the user to the Income Input feature and exit signs off with a closing message.
 
 ![screenshot](documentation/closing-message.png)
@@ -261,15 +269,6 @@ You can fork this repository by using the following steps:
 
 ### Content
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
@@ -277,13 +276,6 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
 | [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
-
-### Media
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
 
 ### Acknowledgements
 
