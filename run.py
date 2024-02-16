@@ -157,12 +157,10 @@ def item_list(data):
     Print monthly expenditure.
     '''
     global FINANCE_DICT
-    #print('> YOUR EXPENDITURE\n')
     print('> YOUR EXPENDITURE:')
     print('  -----------------')
     for key, value in FINANCE_DICT.items():
         print(f'> {key.capitalize()}: {value:,}')
-    #print('\n')
 
     # Adds a thousand comma separator.
     global MONTHLY_EXPENDITURE
@@ -244,7 +242,7 @@ def closing_summary():
 def restart_or_close():
     '''
     Return to start if user enters 1.
-    Exit program and print closing message if user enters 2.
+    Exit app and print closing message if user enters 2.
     '''
     global RESTART
     while True:

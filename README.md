@@ -156,51 +156,51 @@ A dictionary of **key:value** pairs is initiated ie. `finance_dict` with 15 **ke
 
 **The primary functions used are:**
 
-`def clear()`
+`clear()`
 -   Clears the terminal window.
 
-`def setup_dict()`
+`setup_dict()`
 -   Initiates dictionary for expenditure items.
 
-`def start_app()`
+`start_app()`
 -   Welcome messages and instructions.
 
-`def get_income()`
+`get_income()`
 -   Gets income data input by the user.
 -   Runs a while loop to ensure input data is a whole number or 0.
 
-`def get_expenditure(data)`
+`get_expenditure(data)`
 -   Gets expenditure data input by the user.
 -   Updates the finance_dict with these values.
 
-`def ask_user_item()`
+`ask_user_item()`
 -   Asks user if they wish to enter more expenditure items.
 -   Validates input data for yes or no options.
 
-`def get_user_item()`
+`get_user_item()`
 -   Asks user to input name of expenditure item and amount.
 -   Updates the finance_dict with this key and value.
 
-`def calculate_total_expenditure(data)`
+`calculate_total_expenditure(data)`
 -   Calculates total monthly expenditure.
 
-`def item_list(data)`
+`item_list(data)`
 -   Gets finance_dict and print list of all expenditure items.
 -   Adds a thousand comma separator to monthly expenditure output.
 -   Prints monthly expenditure.
 
-`def calculate_monthly_surplus(income, expenditure)`
+`calculate_monthly_surplus(income, expenditure)`
 -   Subtracts expenditure from income to calculate surplus.
 -   Adds a thousand comma separator to output figures.
 -   Prints out summary of financial data with messages.
 
-`def closing_summary()`
+`closing_summary()`
 -   Calculates annual and weekly finance figures.
 -   Adds a thousand comma separator to output figures.
 -   Prints out summary of financial data with messages.
 -   Asks user to restart or exit.
 
-`def restart_or_close()`
+`restart_or_close()`
 -   Returns to income input if user enters 1.
 -   Exits app and prints closing message if user enters 2.
 
