@@ -1,6 +1,7 @@
 # [PERSONAL FINANCE TRACKER](https://aa-personal-finance-tracker-46a2e4082ae9.herokuapp.com)
 
 ## Project Purpose
+
 This app will enable users to calculate their monthly disposable income, based upon input of their monthly income and expenditure, and also indicate their total weekly, monthly and annual expenditure.
 
 Users can enter figures into 15 pre-defined expenditure fields and then add their own if necessary.
@@ -8,13 +9,15 @@ Users can enter figures into 15 pre-defined expenditure fields and then add thei
 Output will consist of a list of all expenditure items and a financial summary showing their disposable income (or deficit) and total weekly, monthly and annual expenditure.
 
 ## Target Audience
-The target audience is adults who wish review their ongoing finances and the pre-defined expenditure fields allow for a range of lifestyles with the option of adding categories more personal to the user.
+
+The target audience is adults who wish review their ongoing finances, and the pre-defined expenditure fields allow for a range of lifestyles with the option of adding categories more personal to the user.
 
 The image below shows how the app is displayed on various devices.
 
 ![screenshot](documentation/mockup.png)
 
 ## UX
+
 ### Initial Design
 The overall design is informed by Code Institute's command line interface (CLI) template, to be deployed on Heroku, with the terminal set to 80 columns by 24 rows.
 
@@ -37,9 +40,11 @@ The overall design is informed by Code Institute's command line interface (CLI) 
 ![screenshot](documentation/script-2.png)
 
 ### Typography
+
 The CLI template uses Courier New.
 
 ## User Stories
+
 As a user, I would like to see instructions about the app so that I can use it.
 
 As a user, I would like to enter my financial data effectively.
@@ -53,6 +58,7 @@ As a user, I would like to restart the app to use again or exit.
 ## Features
 
 ### Existing Features
+
 - **Welcome and Instructions**
     - The first page welcomes the user to the app, outlines its purpose, and presents a clear set of instructions. The user is invited to press RETURN to begin.
 
@@ -124,12 +130,13 @@ As a user, I would like to restart the app to use again or exit.
 ![screenshot](documentation/closing-message.png)
 
 ### Future Features
-- Title 
-    - Any 
-- Title 
-    - Any 
-- Title 
-    - Any colorama used for including color in the terminal
+
+- **Text Colour**
+    - Use [colorama](https://pypi.org/project/colorama/) to add colour to CLI text eg. red for the deficit figures and bold for other text.
+- **Currency Symbols**
+    - Ask user to choose currency symbols and apply these to the output using [currency-symbols](https://pypi.org/project/currency-symbols/)
+- **Decimal Places**
+    - Add two decimal places function to give a more precise output for the user – **check with Tim about this.**
 
 ## Tools & Technologies Used
 
@@ -141,34 +148,66 @@ As a user, I would like to restart the app to use again or exit.
 
 ## Data Model
 
-### Flowchart
-See above.
+The app uses Python to adopt an Object Oriented Programming (OOP) framework.
+
+A dictionary of **key:value** pairs is initiated ie. `finance_dict` with 15 **keys** assigned to the pre-defined expenditure items, and their respective monetary **values** assigned according to the user input (and reset when the app restarts).
 
 ### Functions
 
-The program uses classes as a blueprint for the project's objects (OOP). This allows for the object to be reusable.
+**The primary functions used are:**
 
-```python
-class Person:
-    """ Insert docstring comments here """
-    def __init__(self, name, age, health, inventory):
-        self.name = name
-        self.age = age
-        self.health = health
-        self.inventory = inventory
-```
+`def clear()`
+-   Clears the terminal window.
 
-The primary functions used on this application are:
+`def setup_dict()`
+-   Initiates dictionary for expenditure items.
 
-- `get_sales_data()`
-    - Get sales figures input from the user.
-- `validate_data()`
+`def start_app()`
+-   Welcome messages and instructions.
 
+`def get_income()`
+-   Gets income data input by the user.
+-   Runs a while loop to ensure input data is a whole number or 0.
+
+`def get_expenditure(data)`
+-   Gets expenditure data input by the user.
+-   Updates the finance_dict with these values.
+
+`def ask_user_item()`
+-   Asks user if they wish to enter more expenditure items.
+-   Validates input data for yes or no options.
+
+`def get_user_item()`
+-   Asks user to input name of expenditure item and amount.
+-   Updates the finance_dict with this key and value.
+
+`def calculate_total_expenditure(data)`
+-   Calculates total monthly expenditure.
+
+`def item_list(data)`
+-   Gets finance_dict and print list of all expenditure items.
+-   Adds a thousand comma separator to monthly expenditure output.
+-   Prints monthly expenditure.
+
+`def calculate_monthly_surplus(income, expenditure)`
+-   Subtracts expenditure from income to calculate surplus.
+-   Adds a thousand comma separator to output figures.
+-   Prints out summary of financial data with messages.
+
+`def closing_summary()`
+-   Calculates annual and weekly finance figures.
+-   Adds a thousand comma separator to output figures.
+-   Prints out summary of financial data with messages.
+-   Asks user to restart or exit.
+
+`def restart_or_close()`
+-   Returns to income input if user enters 1.
+-   Exits app and prints closing message if user enters 2.
 
 ### Imports
 
 I've used the following Python package:
-- `os`: used for adding a `clear()` function
+- `os`: used for adding the `clear()` function.
 
 ## Testing
 
@@ -220,7 +259,7 @@ Either:
 Or:
 
 - In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
-- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- Set the remote for Heroku: `heroku git:remote -a personal-finance-tracker` **CHECK WITH TIM (replace *app_name* with your app name)**
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
 	- `git push heroku main`
 
