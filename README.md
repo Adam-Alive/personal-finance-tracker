@@ -135,8 +135,8 @@ As a user, I would like to restart the app to use again or exit.
     - Use [colorama](https://pypi.org/project/colorama/) to add colour to CLI text eg. red for the deficit figures and bold for other text.
 - **Currency Symbols**
     - Ask user to choose currency symbols and apply these to the output using [currency-symbols](https://pypi.org/project/currency-symbols/)
-- **Decimal Places**
-    - Add two decimal places function to give a more precise output for the user – **check with Tim about this.**
+- **xxxx**
+    - Enable 
 
 ## Tools & Technologies Used
 
@@ -229,7 +229,6 @@ Deployment steps are as follows, after account setup:
 - Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
 - Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
 - From the new app **Settings**, click **Reveal Config Vars**, and set the value of KEY to `PORT`, and the value to `8000` then select *add*.
-- If using any confidential credentials, such as CREDS.JSON, then these should be pasted in the Config Variables as well.
 - Further down, to support dependencies, select **Add Buildpack**.
 - The order of the buildpacks is important, select `Python` first, then `Node.js` second. (if they are not in this order, you can drag them to rearrange them)
 
@@ -259,7 +258,7 @@ Either:
 Or:
 
 - In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
-- Set the remote for Heroku: `heroku git:remote -a personal-finance-tracker` **CHECK WITH TIM (replace *app_name* with your app name)**
+- Set the remote for Heroku: `heroku git:remote -a app_name` **CHECK WITH TIM (replace *app_name* with your app name)**
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
 	- `git push heroku main`
 
@@ -272,8 +271,6 @@ This project can be cloned or forked in order to make a local copy on your own s
 For either method, you will need to install any applicable packages found within the *requirements.txt* file.
 
 - `pip3 install -r requirements.txt`.
-
-If using any confidential credentials, such as `CREDS.json` or `env.py` data, these will need to be manually added to your own newly created project as well.
 
 #### Cloning
 
