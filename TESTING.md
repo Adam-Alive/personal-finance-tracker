@@ -50,80 +50,69 @@ I tested the responsiveness of the landing page and have provided a summary of t
 
 ## Lighthouse Audit
 
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
-| Page | Mobile | Desktop | Notes |
-| --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+Results for desktop devices:
+
+![screenshot](documentation/lighthouse-desktop.png)
+
+Results for mobile devices:
+
+![screenshot](documentation/lighthouse-mobile.png)
 
 ## Defensive Programming
 
 Defensive programming has been manually tested and the Pass/Fail outcomes summarised below.
 
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
+| Section | User Action | Expected Result | Pass/Fail | Comments | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| Title | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
+| Title  | | | | |
 | | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
 | | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
+| Title | | | | |
 | | Click on Contact link in navbar | Redirection to Contact page | Pass | |
 | | Enter first/last name | Field will accept freeform text | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter message in textarea | Field will accept freeform text | Pass | |
 | | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
+| Title | | | | |
 | | Click on Sign Up button | Redirection to Sign Up page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
 | | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
 | | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
+| Title | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password | Field will only accept password format | Pass | |
 | | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
+| Title | | | | |
 | | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
+| Title | | | | |
 | | Click on Profile button | User will be redirected to the Profile page | Pass | |
 | | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
 | | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
+
 | repeat for all remaining pages | x | x | x | x |
 
 ## User Story Testing
 
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-| User Story | Screenshot |
-| --- | --- |
-| As a user, I would like to see instructions about the app so that I can use it.  | ![screenshot](documentation/feature01.png) |
-| As a user, I would like to enter my financial data effectively so that my finances can be calculated accurately. | ![screenshot](documentation/feature02.png) |
-| As a user, I would like to enter my own expenditure categories so that I can make the results more personal to me. | ![screenshot](documentation/feature03.png) |
-| As a user, I would like to see a summary of my finances and disposable income so that I can understand my financial circumstances. | ![screenshot](documentation/feature04.png) |
-| As a user, I would like to restart the app to use again or exit so that I can check my figures or leave the app with my data deleted. | ![screenshot](documentation/feature04.png) |
+| User Story | Screenshot | Pass/Fail |
+| --- | --- | --- |
+| As a user, I would like to see instructions about the app so that I can use it.  | ![screenshot](documentation/landing-page.png) | Pass |
+| As a user, I would like to enter my financial data effectively so that my finances can be calculated accurately. | ![screenshot](documentation/income-page.png) | Pass |
+|  | ![screenshot](documentation/income-page-2.png) | Pass |
+| As a user, I would like to enter my own expenditure categories so that I can make the results more personal to me. | ![screenshot](documentation/more-items-y-1.png) | Pass |
+|  | ![screenshot](documentation/more-items-y-2.png) | Pass |
+| | ![screenshot](documentation/more-items-n.png) | Pass |
+| | ![screenshot](documentation/exp-summary.png) | Pass |
+| As a user, I would like to see a summary of my finances and disposable income so that I can understand my financial circumstances. | ![screenshot](documentation/fin-sum-surplus.png) | Pass |
+| As a user, I would like to restart the app to use again or exit so that I can check my figures or leave the app with my data deleted. | See last line of screenshot above | Pass |
+| | ![screenshot](documentation/closing-message.png) | Pass |
 
 
 ## Bugs
