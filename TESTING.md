@@ -73,26 +73,21 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 | | Enter a whole number or 0. | Refresh to Expenditure Input terminal (first item is 'Rent or mortgage') | Pass |  |  ![screenshot](documentation/expenditure-1.png) |
 | | Enter character/s not a whole number or 0, eg. 'Return' only, cat, 88.0, or 3,000 | Display the error message: "> Data is not valid, please enter a whole number or 0"| Pass |  |  ![screenshot](documentation/test-income-input-fails.png) |
 | Expenditure Input | | | | |
-| | Enter a whole number or 0. | Refresh to 2nd Expenditure Input terminal ('Travel') through to 15th pre-defined item.| Pass |  |  ![screenshot](documentation/expenditure-2.png) |
+| | Enter a whole number or 0. | Refresh to 2nd Expenditure Input terminal ('Travel') through to 15th pre-defined item. THEN Refresh to User-defined Expenditure Input after 15th item entered.| Pass THEN Pass |  |  ![screenshot](documentation/expenditure-2.png) |
 | | Enter character/s not a whole number or 0, eg. Tea, !!!, 47.50 or £500 | Display the error message: "> Data is not valid, please enter a whole number or 0" | Pass |  | ![screenshot](documentation/test-expenditure-fails.png) |
 | User-defined Expenditure Input | | | | |
-| | Enter Y. | Ask user to enter an expenditure item not already listed. | Pass |  |  ![screenshot](documentation/more-items-y-1.png) |
+| | Enter Y. | Ask user to enter an expenditure item not already listed. | Pass |  | ![screenshot](documentation/more-items-y-1-2.png) |
 | | Enter name of item (X). | Ask user to enter the cost of X. | Pass |  |  ![screenshot](documentation/more-items-y-1.png) |
 | | Enter a whole number or 0. | Ask user if they wish to enter more items (Y or N). | Pass |  |  ![screenshot](documentation/more-items-n.png) |
 | | Enter character/s not a whole number or 0, eg. maybe, 77, 'space'. | Display the error message: "> (input) is invalid. Enter Y or N." | Pass |  |  ![screenshot](documentation/items-incorrect-y.png) |
-| | Special Character input tbc and Newspapers | xxx | Pass |  |  ![screenshot](documentation/.png) |
-| | Enter N. | Refresh to Expenditure Summary terminal. | Pass |  |  ![screenshot](documentation/.png) |
+| | | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | Enter N. | Refresh to Expenditure Summary terminal. | Pass |  |  ![screenshot](documentation/more-items-n.png) |
 | Expenditure Summary | | | | |
 | | Enter return. | Refresh to Financial Summary terminal. | Pass |  |  ![screenshot](documentation/exp-summary.png) |
-| Financial Summary | | | Financial Summary shown here. | ![screenshot](documentation/fin-sum-surplus.png) |
+| Financial Summary | | |  | Financial Summary shown here: | ![screenshot](documentation/fin-sum-surplus.png)  |
 | | Enter 1. | Refresh to Income Input terminal. | Pass |  |  ![screenshot](documentation/income-blank.png) |
 | | Enter 2. | Refresh to Closing Message terminal and exit app. | Pass |  |  ![screenshot](documentation/closing-message.png) |
-| | Enter character/s not a 1 or 2, eg. 3, y, 22 or &&&. | Display error message: "> (input) is invalid. Enter 1 or 2; > Enter 1 to restart or 2 to exit." | Pass |  |  ![screenshot](documentation/restart-exit-incorrect.png) |
-| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
-| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
-| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
-| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
-| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | Enter character/s not a 1 or 2, eg. 3, y, 22 or &&&. | Display error message: "> (input) is invalid. Enter 1 or 2; > Enter 1 to restart or 2 to exit." | Pass |  |  ![screenshot](documentation/restart-exit-incorrect.png)
 
 ## User Story Testing
 
