@@ -84,7 +84,7 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 | | Enter N. | Refresh to Expenditure Summary terminal. | Pass |  |  ![screenshot](documentation/.png) |
 | Expenditure Summary | | | | |
 | | Enter return. | Refresh to Financial Summary terminal. | Pass |  |  ![screenshot](documentation/exp-summary.png) |
-| Financial Summary | | | | |
+| Financial Summary | | | Financial Summary shown here. | ![screenshot](documentation/fin-sum-surplus.png) |
 | | Enter 1. | Refresh to Income Input terminal. | Pass |  |  ![screenshot](documentation/income-blank.png) |
 | | Enter 2. | Refresh to Closing Message terminal and exit app. | Pass |  |  ![screenshot](documentation/closing-message.png) |
 | | Enter character/s not a 1 or 2, eg. 3, y, 22 or &&&. | Display error message: "> (input) is invalid. Enter 1 or 2; > Enter 1 to restart or 2 to exit." | Pass |  |  ![screenshot](documentation/restart-exit-incorrect.png) |
