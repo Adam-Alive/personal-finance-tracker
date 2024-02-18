@@ -66,8 +66,18 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 | Section | User Action | Expected Result | Pass/Fail | Comments | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Title | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
+| Landing page | | | | |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/landing-page.png) |
+| | Enter return to commence app. | Refresh to Income input terminal. | Pass |  |  ![screenshot](documentation/income-page.png) |
+| Income input | | | | |
+| | Enter a whole number or 0. | Refresh to Expenditure input terminal (first item is 'Rent or mortgage') | Pass |  |  ![screenshot](documentation/expenditure-1.png) |
+| | Enter character/s not a whole number or 0 eg: Return only, cat, 88.0, or 3,000 | Display the error message: "> Data is not valid, please enter a whole number or 0"| Pass |  |  ![screenshot](documentation/test-income-input-fails.png) |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
+| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
 | Title  | | | | |
 | | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
