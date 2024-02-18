@@ -111,9 +111,8 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 | | ![screenshot](documentation/more-items-n.png) | Pass |
 | | ![screenshot](documentation/exp-summary.png) | Pass |
 | As a user, I would like to see a summary of my finances and disposable income so that I can understand my financial circumstances. | ![screenshot](documentation/fin-sum-surplus.png) | Pass |
-| As a user, I would like to restart the app to use again or exit so that I can check my figures or leave the app with my data deleted. | See last line of screenshot above | Pass |
+| As a user, I would like to restart the app to use again so that I can check my figures, or leave the app with my data deleted. | See last line of screenshot above | Pass |
 | | ![screenshot](documentation/closing-message.png) | Pass |
-
 
 ## Bugs
 

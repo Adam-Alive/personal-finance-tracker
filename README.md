@@ -53,7 +53,7 @@ As a user, I would like to enter my own expenditure categories so that I can mak
 
 As a user, I would like to see a summary of my finances and disposable income so that I can understand my financial circumstances.
 
-As a user, I would like to restart the app to use again or exit so that I can check my figures or leave the app with my data deleted.
+As a user, I would like to restart the app to use again so that I can check my figures, or leave the app with my data deleted.
 
 
 ## Features
