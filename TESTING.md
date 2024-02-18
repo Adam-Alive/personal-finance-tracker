@@ -4,14 +4,9 @@ Return back to the [README.md](README.md) file.
 
 ## Code Validation
 
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
 ### Python
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+
 
 The CI Python Linter can be used two different ways.
 - Copy/Paste your Python code directly into the linter.
