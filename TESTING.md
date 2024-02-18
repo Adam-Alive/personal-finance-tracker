@@ -66,48 +66,33 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 | Section | User Action | Expected Result | Pass/Fail | Comments | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Landing page | | | | |
+| Landing Page | | | | |
 | | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/landing-page.png) |
-| | Enter return to commence app. | Refresh to Income input terminal. | Pass |  |  ![screenshot](documentation/income-page.png) |
-| Income input | | | | |
-| | Enter a whole number or 0. | Refresh to Expenditure input terminal (first item is 'Rent or mortgage') | Pass |  |  ![screenshot](documentation/expenditure-1.png) |
-| | Enter character/s not a whole number or 0 eg: Return only, cat, 88.0, or 3,000 | Display the error message: "> Data is not valid, please enter a whole number or 0"| Pass |  |  ![screenshot](documentation/test-income-input-fails.png) |
-| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
-| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
-| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
-| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
-| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
-| | Click on a link to access the app. | Landing page is shown. | Pass |  |  ![screenshot](documentation/.png) |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Title  | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Title | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Title | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Title | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Title | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Title | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-
-| repeat for all remaining pages | x | x | x | x |
+| | Enter return to commence app. | Refresh to Income Input terminal. | Pass |  |  ![screenshot](documentation/income-page.png) |
+| Income Input | | | | |
+| | Enter a whole number or 0. | Refresh to Expenditure Input terminal (first item is 'Rent or mortgage') | Pass |  |  ![screenshot](documentation/expenditure-1.png) |
+| | Enter character/s not a whole number or 0, eg. 'Return' only, cat, 88.0, or 3,000 | Display the error message: "> Data is not valid, please enter a whole number or 0"| Pass |  |  ![screenshot](documentation/test-income-input-fails.png) |
+| Expenditure Input | | | | |
+| | Enter a whole number or 0. | Refresh to 2nd Expenditure Input terminal ('Travel') through to 15th pre-defined item.| Pass |  |  ![screenshot](documentation/expenditure-2.png) |
+| | Enter character/s not a whole number or 0, eg. Tea, !!!, 47.50 or £500 | Display the error message: "> Data is not valid, please enter a whole number or 0" | Pass |  | ![screenshot](documentation/test-expenditure-fails.png) |
+| User-defined Expenditure Input | | | | |
+| | Enter Y. | Ask user to enter an expenditure item not already listed. | Pass |  |  ![screenshot](documentation/more-items-y-1.png) |
+| | Enter name of item (X). | Ask user to enter the cost of X. | Pass |  |  ![screenshot](documentation/more-items-y-1.png) |
+| | Enter a whole number or 0. | Ask user if they wish to enter more items (Y or N). | Pass |  |  ![screenshot](documentation/more-items-n.png) |
+| | Enter character/s not a whole number or 0, eg. maybe, 77, 'space'. | Display the error message: "> (input) is invalid. Enter Y or N." | Pass |  |  ![screenshot](documentation/items-incorrect-y.png) |
+| | Special Character input tbc and Newspapers | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | Enter N. | Refresh to Expenditure Summary terminal. | Pass |  |  ![screenshot](documentation/.png) |
+| Expenditure Summary | | | | |
+| | Enter return. | Refresh to Financial Summary terminal. | Pass |  |  ![screenshot](documentation/exp-summary.png) |
+| Financial Summary | | | | |
+| | Enter 1. | Refresh to Income Input terminal. | Pass |  |  ![screenshot](documentation/income-blank.png) |
+| | Enter 2. | Refresh to Closing Message terminal and exit app. | Pass |  |  ![screenshot](documentation/closing-message.png) |
+| | Enter character/s not a 1 or 2, eg. 3, y, 22 or &&&. | Display error message: "> (input) is invalid. Enter 1 or 2; > Enter 1 to restart or 2 to exit." | Pass |  |  ![screenshot](documentation/restart-exit-incorrect.png) |
+| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
+| | xxx | xxx | Pass |  |  ![screenshot](documentation/.png) |
 
 ## User Story Testing
 
