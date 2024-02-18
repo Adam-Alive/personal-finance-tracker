@@ -136,8 +136,8 @@ As a user, I would like to restart the app to use again so that I can check my f
     - Use [colorama](https://pypi.org/project/colorama/) to add colour to CLI text eg. red for the deficit figures and bold for other text.
 - **Currency Symbols**
     - Ask user to choose currency symbols and apply these to the output using [currency-symbols](https://pypi.org/project/currency-symbols/)
-- **xxxx**
-    - Enable 
+- **Floating Point Numbers**
+    - Use floating point numbers to allow user to enter and see output to 2 decimal places for a more accurate financial picture.
 
 ## Tools & Technologies Used
 
@@ -216,14 +216,14 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser.
+Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend app in a modern web browser.
 This is to improve the accessibility of the project to others.
 
-The live deployed application can be found deployed on [Heroku](https://aa-personal-finance-tracker-46a2e4082ae9.herokuapp.com).
+The live deployed app can be found at [Personal Finance Tracker at Heroku](https://aa-personal-finance-tracker-46a2e4082ae9.herokuapp.com)
 
 ### Heroku Deployment
 
-This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate apps entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
 
@@ -308,6 +308,7 @@ You can fork this repository by using the following steps:
 
 | Source | Location | Notes |
 | --- | --- | --- |
+| [Code Institue](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/tree/master/05-deployment/01-deployment-part-1) | Entire project | Inspiration and learning from the Love Sandwiches Project |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | Tool to help generate the Markdown files |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | run.py |  How to add a thousand comma separator to integers for output; how to iterate through dict key:value pairs|
 | [StackOverflow](https://stackoverflow.com/a/10742904) | run.py | How to add a thousand comma separator to integers within a dictionary |
