@@ -80,7 +80,6 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 | | Enter name of item (X). | Ask user to enter the cost of X. | Pass |  |  ![screenshot](documentation/more-items-y-1.png) |
 | | Enter a whole number or 0. | Ask user if they wish to enter more items (Y or N). | Pass |  |  ![screenshot](documentation/more-items-n.png) |
 | | Enter character/s not a whole number or 0, eg. maybe, 77, 'space'. | Display the error message: "> (input) is invalid. Enter Y or N." | Pass |  |  ![screenshot](documentation/items-incorrect-y.png) |
-| | | xxx | Pass |  |  ![screenshot](documentation/.png) |
 | | Enter N. | Refresh to Expenditure Summary terminal. | Pass |  |  ![screenshot](documentation/more-items-n.png) |
 | Expenditure Summary | | | | |
 | | Enter return. | Refresh to Financial Summary terminal. | Pass |  |  ![screenshot](documentation/exp-summary.png) |
@@ -106,45 +105,41 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 ## Bugs
 
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
+-   **Issue:** After adding a thousand comma separator to the surplus value, not possible to compare surplus output with 0 (zero) as the value is now a string, not an integer.
 
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+![screenshot](documentation/bugs/bug-5-1-surplus.png)
 
-    ![screenshot](documentation/bug01.png)
 
-    - To fix this, I _____________________.
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+    -   **Fix:**
 
-    ![screenshot](documentation/bug02.png)
+-   **Issue:** 
+    -   **Fix:**
 
-    - To fix this, I _____________________.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
+-   **Issue:** 
+    -   **Fix:**
 
-    ![screenshot](documentation/bug03.png)
 
-    - To fix this, I _____________________.
+
+
 
 ## Unfixed Bugs
 
 You will need to mention unfixed bugs and why they were not fixed.
 This section should include shortcomings of the frameworks or technologies used.
 
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
+-   **Issue:** 
+    -   **Fix:**
 
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
 
-    ![screenshot](documentation/unfixed-bug01.png)
+-   **Issue:** 
+    -   **Fix:**
 
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
+-   **Issue:** 
+    -   **Fix:**
 
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
 
-    ![screenshot](documentation/unfixed-bug02.png)
 
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
 
 There are no remaining bugs that I am aware of.
