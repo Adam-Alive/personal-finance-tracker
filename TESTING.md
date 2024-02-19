@@ -73,7 +73,7 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 | | Enter a whole number or 0. | Refresh to Expenditure Input terminal (first item is 'Rent or mortgage') | Pass |  |  ![screenshot](documentation/expenditure-1.png) |
 | | Enter character/s not a whole number or 0, eg. 'Return' only, cat, 88.0, or 3,000 | Display the error message: "> Data is not valid, please enter a whole number or 0"| Pass |  |  ![screenshot](documentation/test-income-input-fails.png) |
 | Expenditure Input | | | | |
-| | Enter a whole number or 0. | Refresh to 2nd Expenditure Input terminal ('Travel') through to 15th pre-defined item. THEN Refresh to User-defined Expenditure Input after 15th item entered.| Pass THEN Pass |  |  ![screenshot](documentation/expenditure-2.png) |
+| | Enter a whole number or 0. | Refresh to 2nd Expenditure Input terminal ('Travel') through to 15th pre-defined item ('Entertainment'). THEN Refresh to User-defined Expenditure Input after 15th item entered.| Pass THEN Pass |  |  ![screenshot](documentation/expenditure-2.png) ![screenshot](documentation/exp-15-item.png) ![screenshot](documentation/more-items-q.png)|
 | | Enter character/s not a whole number or 0, eg. Tea, !!!, 47.50 or £500 | Display the error message: "> Data is not valid, please enter a whole number or 0" | Pass |  | ![screenshot](documentation/test-expenditure-fails.png) |
 | User-defined Expenditure Input | | | | |
 | | Enter Y. | Ask user to enter an expenditure item not already listed. | Pass |  | ![screenshot](documentation/more-items-y-1-2.png) |
