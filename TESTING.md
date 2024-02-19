@@ -107,7 +107,7 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 -   **Issue:** To improve the user experience, I wanted to add thousand comma separators to numbers in the output. For example, an input of income 2000 would result in an output of income 2,000 and annual income 24,000.
 
--   I added code to apply this to income, expenditure and surplus variables (see lines 169 - 174):
+-   I added code to apply this to `income`, `expenditure` and `surplus` variables (see lines 169 - 174):
 
 ![screenshot](documentation/bugs/bug-5-2.png)
 
@@ -115,12 +115,12 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 ![screenshot](documentation/bugs/bug-5-1-surplus.png)
 
--   As shown, the TypeError involved the comparison of the surplus value with 0 in order to print out relevant message (disposable income, deficit or income matching expenditure) - see lines 183 - 190 in the code above.
+-   As shown, the TypeError involved the comparison of the `surplus` value with 0 in order to print out relevant message (disposable income, deficit or income matching expenditure) - see lines 183 - 190 in the code above.
 
 -   This error confirmed that, since I had added a comma separator, the data was now a string, not an integer, so could not be processed mathematically.
 
 -   **Fix:**
--   I therefore changed the code so that the comma separators were added after the surplus comparisons with 0. See new lines 181 and 183 below:
+-   I therefore changed the code so that the comma separators were added after the `surplus` comparisons with 0. See new lines 181 and 183 below:
 
 ![screenshot](documentation/bugs/bug-5-3.png)
 
