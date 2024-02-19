@@ -105,20 +105,36 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 ## Bugs
 
--   **Issue:** After adding a thousand comma separator to the surplus value, not possible to compare surplus output with 0 (zero) as the value is now a string, not an integer.
+-   **Issue:** To improve the user experience, I wanted to add thousand comma separators to numbers in the output. For example, an input of income 2000 would result in an output of income 2,000 and annual income 24,000.
+
+-   I added code to apply this to income, expenditure surplus (see lines 169 - 174):
+
+![screenshot](documentation/bugs/bug-5-2.png)
+
+-   But when running the program it crashed and would not display the full financial summary see:
 
 ![screenshot](documentation/bugs/bug-5-1-surplus.png)
 
+-   As shown, the TypeError involved the comparison of the surplus value with 0 in order to print out relevant message (disposable income, deficit or income matching expenditure) - see lines 183 - 190 in the code above.
 
+-   This error confirmed that, since I had added a comma separator, the data was now a string, not an integer, so could not be processed mathematically.
 
-    -   **Fix:**
+-   **Fix:**
+-   I therefore changed the code so that the comma separators were added after the surplus comparisons with 0. See new lines 181 and 183 below:
+
+![screenshot](documentation/bugs/bug-5-3.png)
+
+-   The Financial Summary was now displaying correctly, with the disposable income shown:
+
+![screenshot](documentation/bugs/bug-5-4.png)
+
 
 -   **Issue:** 
-    -   **Fix:**
+-   **Fix:**
 
 
 -   **Issue:** 
-    -   **Fix:**
+-   **Fix:**
 
 
 
@@ -130,14 +146,14 @@ You will need to mention unfixed bugs and why they were not fixed.
 This section should include shortcomings of the frameworks or technologies used.
 
 -   **Issue:** 
-    -   **Fix:**
+-   **Fix:**
 
 
 -   **Issue:** 
-    -   **Fix:**
+-   **Fix:**
 
 -   **Issue:** 
-    -   **Fix:**
+-   **Fix:**
 
 
 
