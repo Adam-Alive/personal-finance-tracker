@@ -119,8 +119,7 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 -   This error confirmed that, since I had added a comma separator, the data was now a string, not an integer, so could not be processed mathematically.
 
--   **Fix:**
--   I therefore changed the code so that the comma separators were added after the `surplus` comparisons with 0. See new lines 181 and 183 below:
+-   **Fix:** I therefore changed the code so that comma separators were added after the `surplus` comparisons with 0. See new lines 181 and 183 below:
 
 ![screenshot](documentation/bugs/bug-5-3.png)
 
@@ -134,9 +133,7 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 ![screenshot](documentation/bugs/ctrl-c-error.png)
 
--   **Issue:** Input validation for whole number input, for Y or N, and for 1 or 2 are essential for the app to run smoothly. 
-
--   I also explored validation for User-defined Expenditure Input, eg. gym membership, as shown in features. Entering special characters in error would result in their display in the final output, meaning the user would need to run through the program again if they wanted the correct output, see:
+-   **Issue:** Input validation for whole number input, for Y or N, and for 1 or 2 are essential for the app to run smoothly. I also explored validation for User-defined Expenditure Input, eg. gym membership, as shown in features. Entering special characters in error would result in their display in the final output, meaning the user would need to run through the program again if they wanted the correct output, see:
 
 ![screenshot](documentation/bugs/bug-4-1.png)
 
