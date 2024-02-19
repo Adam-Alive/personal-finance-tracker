@@ -107,11 +107,11 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 -   **Issue:** To improve the user experience, I wanted to add thousand comma separators to numbers in the output. For example, an input of income 2000 would result in an output of income 2,000 and annual income 24,000.
 
--   I added code to apply this to income, expenditure surplus (see lines 169 - 174):
+-   I added code to apply this to income, expenditure and surplus variables (see lines 169 - 174):
 
 ![screenshot](documentation/bugs/bug-5-2.png)
 
--   But when running the program it crashed and would not display the full financial summary see:
+-   But when running the program it crashed and would not display the full financial summary, see:
 
 ![screenshot](documentation/bugs/bug-5-1-surplus.png)
 
@@ -128,34 +128,30 @@ Defensive programming has been manually tested and the Pass/Fail outcomes summar
 
 ![screenshot](documentation/bugs/bug-5-4.png)
 
-
--   **Issue:** 
--   **Fix:**
-
-
--   **Issue:** 
--   **Fix:**
-
-
-
-
-
 ## Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
+-   **Issue:** If a user wishes to clear the terminal by pressing ctrl-c, the app crashes, and this is a known limitation of the CLI template in its current format, see:
 
--   **Issue:** 
--   **Fix:**
+![screenshot](documentation/bugs/ctrl-c-error.png)
 
+-   **Issue:** Input validation for whole number input, for Y or N, and for 1 or 2 are essential for the app to run smoothly. 
 
--   **Issue:** 
--   **Fix:**
+-   I also explored validation for User-defined Expenditure Input, eg. gym membership, as shown in features. Entering special characters in error would result in their display in the final output, meaning the user would need to run through the program again if they wanted the correct output, see:
 
--   **Issue:** 
--   **Fix:**
+![screenshot](documentation/bugs/bug-4-1.png)
 
+![screenshot](documentation/bugs/bug-4-2.png)
 
+![screenshot](documentation/bugs/bug-4-3.png)
 
+-   I therefore applied the `isalnum()` method to the `item_key` input, see lines 128 - 134 below:
 
-There are no remaining bugs that I am aware of.
+![screenshot](documentation/bugs/bug-4-4.png)
+
+-   This challenged the input of special characters, eg. & £ ! etc but spaces were now also rejected, meaning that expenditure items of more than one word such as gym membership or health insurance would not be accepted, see:
+
+![screenshot](documentation/bugs/bug-4-5.png)
+
+-   I am aware that this can be resolved with the use of RegEx methods but felt it best to leave this for my future learning and development. Therefore, since the use of spaces is more important than the challenge to special characters, I removed the `isalnum()`code and special characters are accepted at the User-defined Expenditure Input stage.
+
+There are no remaining bugs to my knowledge.
